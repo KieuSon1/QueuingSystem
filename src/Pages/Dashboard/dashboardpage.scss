@@ -11,6 +11,12 @@
   .dashboard__content {
       height: inherit;
       flex: 1;
+
+      &-heading {
+          font-size: 18px;
+
+      }
+      
   }
 }
 
