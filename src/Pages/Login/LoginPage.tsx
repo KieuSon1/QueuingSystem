@@ -1,49 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import Banner1 from "../../Assets/Banner1";
 import Logo from "../../Assets/Logo";
 import Button from "../../Components/Button/Button";
 import Textbox from "../../Components/Textbox/Textbox";
 import "./loginpage.scss";
+import { Banner2 } from "../../Assets/Banner2";
+import LoginForm from "../../Components/Forms/Login-form/LoginForm";
+import ForgotPasswordForm from "../../Components/Forms/ForgotPassword-form/ForgotPasswordForm";
+import EditPasswordForm from "../../Components/Forms/EditPassword-form/EditPasswordForm";
+import Banner from "../../Components/Banner/Banner";
 
-const LoginPage = () => {
-  const LoginForm = () => {
-    return (
-      <div className="login-form">
-        <div className="login-form-top">
-          <Logo />
-        </div>
-        <div className="login-form-middle">
-          <Textbox label="Tên đăng nhập *" />
-          <Textbox label="Mật khẩu *" isPassword />
-          <a href="#" className="forgot-password">
-            Quên mật khẩu
-          </a>
-        </div>
-        <div className="login-form-bottom">
-          {" "}
-          <Button  text="Đăng nhập"/>
-        </div>
-      </div>
-    );
-  };
+const LOGIN = "login"
+const FORGOTPASSWORD = "forgotpassword"
+const EDITPASSWORD = "editpassword"
 
-  const Image = () => {
-    return <div className="images">
-        <Banner1/>
-        <div className="heading">
-            <div className="heading-small">Hệ thống</div>
-            <div className="heading-large">Quản lý xếp hàng</div>
-        </div> 
-        
-    </div>;
-  };
+const LoginPage: React.FC = () => {
+
+  const [type, setType] = useState("login")
+  console.log(type);
+
+  const switchForm = (form: string) : void => {
+    setType(form)
+  }
+  
 
   return (
     <div className="app__login-page">
-      <LoginForm />
-      <Image/>
+      {type === LOGIN && <LoginForm switchForm={switchForm}/>}
+      {type === FORGOTPASSWORD && <ForgotPasswordForm switchForm={switchForm}/>}
+      {type === EDITPASSWORD && <EditPasswordForm switchForm={switchForm}/>}
+      <Banner />
     </div>
   );
 };
 
 export default LoginPage;
+
