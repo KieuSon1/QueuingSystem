@@ -4,16 +4,16 @@ import { Banner2 } from '../../Assets/Banner2';
 import "./banner.scss"
 
 const Banner = () => {
+  const path = window.location.pathname
+
   return (
     <div className="images">
-    {/* Banner trang đăng nhập */}
-    {/* <Banner1/> */}
-    {/* Banner trang quên mật khẩu */}
-    <Banner2 />
-    {/* <div className="heading">
+    {path === "/login" ?  <Banner1/> : <Banner2 />}
+    {path === "/login" && <div className="heading">
         <div className="heading-small">Hệ thống</div>
         <div className="heading-large">Quản lý xếp hàng</div>
-    </div> */}
+    </div>}
+    
     
     
 </div>

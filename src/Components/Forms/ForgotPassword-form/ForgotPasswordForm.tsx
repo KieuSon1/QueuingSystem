@@ -1,10 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 import Logo from '../../../Assets/Logo'
 import Button from '../../Button/Button'
 import Textbox from '../../Textbox/Textbox'
 import "./forgotpasswordform.scss"
 
-const ForgotPasswordForm: React.FC<{switchForm: Function}> = ({switchForm}) => {
+const ForgotPasswordForm: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <div className="forgot-password-form">
     <div className="forgot-password-form-top">
@@ -16,8 +18,8 @@ const ForgotPasswordForm: React.FC<{switchForm: Function}> = ({switchForm}) => {
       
     </div>
     <div className="forgot-password-form-bottom">
-      <Button  text="Huỷ" isOutlined onClick={() => switchForm("login")} />
-      <Button  text="Tiếp tục" onClick={() => switchForm("editpassword")}/>
+      <Button  text="Huỷ" isOutlined onClick={() => navigate("/login")} />
+      <Button  text="Tiếp tục" onClick={() => navigate("/edit-password")} />
     </div>
 
    

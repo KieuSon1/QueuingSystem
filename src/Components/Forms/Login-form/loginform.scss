@@ -28,6 +28,7 @@
         gap: 20px;
 
         .forgot-password {
+            cursor: pointer;
             text-decoration: none;
             font-size: 18px;
             color: rgba($color: red, $alpha: .5);
@@ -56,6 +57,7 @@
     }
 
     &-new-password{
+        
         .forgot-password-text{
             display: flex;
             justify-content: center;

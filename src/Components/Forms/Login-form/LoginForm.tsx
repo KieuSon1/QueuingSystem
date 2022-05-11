@@ -1,25 +1,26 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 import Logo from '../../../Assets/Logo'
 import Button from '../../Button/Button'
 import Textbox from '../../Textbox/Textbox'
 import "./loginform.scss"
 
-const LoginForm: React.FC<{switchForm: Function}> = ({switchForm}) => {
+const LoginForm: React.FC= () => {
+  const navigate = useNavigate()
   return (
     <div className="login-form">
     <div className="login-form-top">
       <Logo />
     </div>
-    {/* Trang đăng nhập */}
     <div className="login-form-middle">
       <Textbox label="Tên đăng nhập *" />
       <Textbox label="Mật khẩu *" isPassword />
-      <a href="#" className="forgot-password" onClick={() => switchForm("forgotpassword")}>
+      <div className="forgot-password" onClick={() => navigate("/forgot-password")}>
         Quên mật khẩu?
-      </a>
+      </div>
     </div>
     <div className="login-form-bottom">
-      <Button  text="Đăng nhập" onClick={() => console.log("500K lam` tiep'")}/>
+      <Button  text="Đăng nhập" onClick={() => navigate("/dashboard")}/>
     </div>
 
    
