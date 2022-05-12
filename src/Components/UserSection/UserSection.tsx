@@ -42,10 +42,6 @@ const UserSection: React.FC = () => {
                   </div>
                 );
               })}
-              {/* <div className="notification-item">
-                <div className="notification-item__title">Người dùng: Lê Kim Tân</div>
-                <div className="notification-item__content">Thời gian nhận số: 12h30 ngày 31/2/2020</div>
-            </div> */}
             </div>
           </div>
         )}
