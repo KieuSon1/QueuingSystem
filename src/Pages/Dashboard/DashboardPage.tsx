@@ -9,11 +9,7 @@ const DashboardPage: React.FC = () => {
       <Sidebar/>
       <div className="dashboard__content">
         {/* ban beo cot' vao` day */}
-        <div className='dashboard__content-top'>
-          <div className='dashboard__content-heading'>Dashboard</div>
-
-          
-        </div>
+        
       </div>
     </div>
   )
