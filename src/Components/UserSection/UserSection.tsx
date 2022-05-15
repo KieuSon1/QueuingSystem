@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./usersection.scss";
 import Bell from "../../Assets/Bell";
+import { useNavigate } from "react-router";
 
 const imgUrl =
   "https://dothobattrang.vn/wp-content/uploads/2018/05/con-meo-hoang-vao-nha-la-diem-bao-gi-hen.jpg";
@@ -18,6 +19,7 @@ const notifications = [
 
 const UserSection: React.FC = () => {
   const [notificationExpand, setNotificationExpand] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="app__user-section">
@@ -47,7 +49,7 @@ const UserSection: React.FC = () => {
         )}
       </div>
       <div className="avatar">
-        <img src={imgUrl} alt="" />
+        <img src={imgUrl} alt="" onClick={() => navigate("user-info")}/>
       </div>
       <div className="hello-user">
         <span className="hello">Xin chào</span>

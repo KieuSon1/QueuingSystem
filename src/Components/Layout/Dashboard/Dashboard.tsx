@@ -1,13 +1,17 @@
-import React from 'react'
-import { Outlet } from 'react-router'
-import "./dashboard.scss"
+import React from "react";
+import { Outlet } from "react-router";
+import "./dashboard.scss";
 
-const Dashboard : React.FC = () => {
+
+
+
+
+const Dashboard: React.FC = () => {
   return (
-      <div className="app__layout-dashboard">
-          DASHBOARD
-      </div>
-  )
-}
+    <div className="app__layout-dashboard">
+      
+    </div>
+  );
+};
 
-export default Dashboard
+export default Dashboard;
