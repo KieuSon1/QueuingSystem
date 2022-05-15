@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./usersection.scss";
 import Bell from "../../Assets/Bell";
+import { useNavigate } from "react-router";
 
 const imgUrl =
   "https://scontent.xx.fbcdn.net/v/t1.15752-9/280456204_850331862593722_6796225965863368502_n.jpg?stp=dst-jpg_p75x225&_nc_cat=111&ccb=1-6&_nc_sid=aee45a&_nc_ohc=wAYWEdu1YyMAX9vwFbn&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIV0EwsTF_9Ri_qsNv5_JOTIwvp1K-f8q2xHdIi8uB9XQ&oe=62A2F18E";
@@ -18,6 +19,7 @@ const notifications = [
 
 const UserSection: React.FC = () => {
   const [notificationExpand, setNotificationExpand] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="app__user-section">
@@ -47,7 +49,7 @@ const UserSection: React.FC = () => {
         )}
       </div>
       <div className="avatar">
-        <img src={imgUrl} alt="" />
+        <img src={imgUrl} alt="" onClick={() => navigate("user-info")}/>
       </div>
       <div className="hello-user">
         <span className="hello">Xin chào</span>
