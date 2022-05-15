@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router'
 import Sidebar from '../../Components/Sidebar/Sidebar'
 import Textbox from '../../Components/Textbox/Textbox'
 import UserSection from '../../Components/UserSection/UserSection'
@@ -11,7 +12,7 @@ const DashboardPage: React.FC = () => {
       <UserSection/>
       <div className="dashboard__content">
         {/* ban beo cot' vao` day */}
-        
+        <Outlet/>
       </div>
     </div>
   )

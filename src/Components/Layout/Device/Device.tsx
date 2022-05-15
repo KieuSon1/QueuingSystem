@@ -1,8 +1,9 @@
 import React from 'react'
+import "./device.scss"
 
 const Device = () => {
   return (
-    <div>Device</div>
+    <div className='app__layout-device'>Device</div>
   )
 }
 
