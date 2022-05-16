@@ -12,7 +12,7 @@ const UserInfo: React.FC = () => {
       <div className="app__layout-user-info">
         <div className="col">
           <div className="app__layout-user-info__avatar">
-            <img src={imgUrl} alt="" />
+            <img src={userInfo.avatar} alt="" />
           </div>
           <div className="app__layout-user-info__name">{userInfo.fullName}</div>
         </div>
