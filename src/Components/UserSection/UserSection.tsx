@@ -6,15 +6,15 @@ import { useNavigate } from "react-router";
 const imgUrl =
   "https://dothobattrang.vn/wp-content/uploads/2018/05/con-meo-hoang-vao-nha-la-diem-bao-gi-hen.jpg";
 const notifications = [
-  { user: "Le Kim Tan", content: "12h30 ngay 31/2/2020" },
-  { user: "Trinh", content: "12h30 ngay 31/2/2020" },
-  { user: "Le Kim Tan", content: "12h30 ngay 31/2/2020" },
-  { user: "Le Kim Tan", content: "12h30 ngay 31/2/2020" },
-  { user: "Le Kim Tan", content: "12h30 ngay 31/2/2020" },
-  { user: "Le Kim Tan", content: "12h30 ngay 31/2/2020" },
-  { user: "Le Kim Tan", content: "12h30 ngay 31/2/2020" },
-  { user: "Le Kim Tan", content: "12h30 ngay 31/2/2020" },
-  { user: "Le Kim Tan", content: "12h30 ngay 31/2/2020" },
+  { user: "Nguyễn Thị Thùy Dung", content: "12h30 ngày 31/2/2020" },
+  { user: "Nguyễn Thiên Trinh", content: "12h30 ngày 31/2/2020" },
+  { user: "Võ Thị Kim Liên", content: "12h30 ngày 31/2/2020" },
+  { user: "Hoàng Nguyễn Quốc Huy", content: "12h30 ngày 31/2/2020" },
+  { user: "Võ Thị Lan Anh", content: "12h30 ngày 31/2/2020" },
+  { user: "Võ Thị Lan Anh", content: "12h30 ngày 31/2/2020" },
+  { user: "Võ Thị Lan Anh", content: "12h30 ngày 31/2/2020" },
+  { user: "Võ Thị Lan Anh", content: "12h30 ngày 31/2/2020" },
+  { user: "Võ Thị Lan Anh", content: "12h30 ngày 31/2/2020" },
 ];
 
 const UserSection: React.FC = () => {
@@ -53,7 +53,7 @@ const UserSection: React.FC = () => {
       </div>
       <div className="hello-user">
         <span className="hello">Xin chào</span>
-        <span className="user-name">Lee Kim Teem</span>
+        <span className="user-name">Kiều Hải Sơn</span>
       </div>
     </div>
   );
