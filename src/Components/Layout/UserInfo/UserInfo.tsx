@@ -25,7 +25,7 @@ const UserInfo: React.FC = () => {
           <Textbox label="Tên đăng nhập" value={userInfo.userName}/>
           <Textbox label="Mật khẩu" value={userInfo.password}/>
           <Textbox label="Vai trò" value={`${userInfo.role === 0 ? `Admin` : `Contributor`}`}/>
-        </div>3
+        </div>
       </div>
     );
   };
