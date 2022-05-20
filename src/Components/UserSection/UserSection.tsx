@@ -53,7 +53,7 @@ const UserSection: React.FC = () => {
       </div>
       <div className="hello-user">
         <span className="hello">Xin chào</span>
-        <span className="user-name">Kiều Hải Sơn</span>
+        <span className="user-name">Mạnh Quang Thông</span>
       </div>
     </div>
   );

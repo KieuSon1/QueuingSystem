@@ -21,36 +21,6 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
-<<<<<<< HEAD
-    padding: 0 24px;
-    transform: translateY(-100px);
-  
-    .col {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      width: fit-content;
-      justify-content: center;
-      align-items: center;
-      gap: 24px;
-      .app__layout-user-info__avatar {
-        width: 248px;
-        height: 248px;
-        border-radius: 50%;
-        img {
-          height: inherit;
-          width: inherit;
-          border-radius: inherit;
-          object-fit: cover;
-        }
-      }
-      .app__layout-user-info__name {
-        height: 36px;
-        width: 188px;
-        font-size: 24px;
-        font-weight: 700;
-        color: $text;
-=======
     .app__layout-user-info__avatar {
       position: relative;
       width: 248px;
@@ -61,7 +31,6 @@
         width: inherit;
         border-radius: inherit;
         object-fit: cover;
->>>>>>> f840345c5b4a33d08f203b95599e9d4d4aef0145
       }
     }
 
