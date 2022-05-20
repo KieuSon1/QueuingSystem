@@ -12,13 +12,17 @@ import Service from "../../../Assets/Service";
 import Persent76 from "../../../Assets/Persent76";
 import Persent86 from "../../../Assets/Persent86";
 import Series from "../../../Assets/Series";
+import Arrowleft from "../../../Assets/Arrowleft";
+import Arrowright from "../../../Assets/Arrowright";
 
 const Dashboard: React.FC = () => {
   return (
     <div className="app__layout-dashboard">
+      {/*///////////////////////////////////////////////////////////////////////  */}
       <div className="bigcol1">
         <div className="app__layout-dashboard__title1">Dashboard</div>
         <div className="app__layout-dashboard__title2">Biều đồ cấp số</div>
+        
         <div className="row1">
           <div className="col1">
             <div className="logo1">
@@ -61,9 +65,12 @@ const Dashboard: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="row2"></div>
+        <div className="row2">
+           
+        </div>
       </div>
 
+      {/* ////////////////////////////////////////////////////////////////////// */}
       <div className="bigcol2">
         <div className="app__layout-dashboard__title3">Tổng quan</div>
         <div className="row__right">
@@ -117,7 +124,60 @@ const Dashboard: React.FC = () => {
           </div>
 
           <div className="row__right__bot">
-            
+            <div className="year">
+              <div className="arrow__left">
+                <Arrowleft />
+              </div>
+              <div className="year__text">19 Nov 2021</div>
+              <div className="arrow__right">
+                <Arrowright />
+              </div>
+            </div>
+            <div className="border__mid"></div>
+            <div className="days">
+              <div className="days__mo">Mo</div>
+              <div className="days__tu">Tu</div>
+              <div className="days__we">We</div>
+              <div className="days__th">Th</div>
+              <div className="days__fr">Fr</div>
+              <div className="days__sa">Sa</div>
+              <div className="days__su">Su</div>
+              <div className="days__27">27</div>
+              <div className="days__28">28</div>
+              <div className="days__29">29</div>
+              <div className="days__30">30</div>
+              <div className="days__1">1</div>
+              <div className="days__2">2</div>
+              <div className="days__3">3</div>
+              <div className="days__4">4</div>
+              <div className="days__5">5</div>
+              <div className="days__6">6</div>
+              <div className="days__7">7</div>
+              <div className="days__8">8</div>
+              <div className="days__9">9</div>
+              <div className="days__10">10</div>
+              <div className="days__11">11</div>
+              <div className="days__12">12</div>
+              <div className="days__13">13</div>
+              <div className="days__14">14</div>
+              <div className="days__15">15</div>
+              <div className="days__16">16</div>
+              <div className="days__17">17</div>
+              <div className="days__18">18</div>
+              <div className="days__19">19</div>
+              <div className="days__20">20</div>
+              <div className="days__21">21</div>
+              <div className="days__22">22</div>
+              <div className="days__23">23</div>
+              <div className="days__24">24</div>
+              <div className="days__25">25</div>
+              <div className="days__26">26</div>
+              <div className="days__27new">27</div>
+              <div className="days__28new">28</div>
+              <div className="days__29new">29</div>
+              <div className="days__30new">30</div>
+              <div className="days__31">31</div>
+            </div>
           </div>
         </div>
       </div>

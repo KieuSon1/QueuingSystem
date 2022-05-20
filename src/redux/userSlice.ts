@@ -4,11 +4,11 @@ import { userInfo } from './types';
 
 
 const initialState: userInfo = {
-  userName: "kimtan1",
-  fullName: "Lê Kim Tân",
-  phoneNumber: "0999999999",
-  email: "kimtan1@gmail.com",
-  password: "meomeo",
+  userName: "KieuSon",
+  fullName: "Kiều Hải Sơn",
+  phoneNumber: "0123456789",
+  email: "conmeo@gmail.com",
+  password: "conmeoconcho",
   role: 0
 };
 
