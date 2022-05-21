@@ -1,11 +1,11 @@
-@import '../../../../scss/color';
+@import "../../../../scss/color";
 
 .app__summary-card {
   height: 83px;
   width: 353px;
   border-radius: 12px;
   background-color: $background;
-  box-shadow: 2px 2px 15px 0px $gray;
+  box-shadow: $shadow;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -61,6 +61,7 @@
       align-items: center;
       gap: 5px;
       span {
+        color: inherit;
         &:first-child {
           height: 4px;
           width: 4px;

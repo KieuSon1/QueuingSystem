@@ -1,10 +1,13 @@
-import React from 'react';
-import { CircularProgressbar } from 'react-circular-progressbar';
-import Service from '../../../../Assets/Service';
-import Tivi from '../../../../Assets/Tivi';
-import './summarycard.scss';
+import React from "react";
+import {
+  CircularProgressbarWithChildren,
+  buildStyles,
+} from "react-circular-progressbar";
+import Service from "../../../../Assets/Service";
+import Tivi from "../../../../Assets/Tivi";
+import "./summarycard.scss";
 
-import 'react-circular-progressbar/dist/styles.css';
+import "react-circular-progressbar/dist/styles.css";
 
 const SummaryCard: React.FC<{
   type: string;
@@ -15,48 +18,69 @@ const SummaryCard: React.FC<{
   ignore?: number;
 }> = ({ type, percentage, total, active, inactive, ignore }) => {
   return (
-    <div className='app__summary-card'>
-      <div className='rounded-graph'>
-        <CircularProgressbar
+    <div className="app__summary-card">
+      <div className="rounded-graph">
+        <CircularProgressbarWithChildren
+          styles={buildStyles({
+            pathColor: "#FF7506",
+            textColor: "#535261",
+            textSize: 22,
+            strokeLinecap: 1,
+            trailColor: "#EAEAEC",
+          })}
           value={percentage}
           maxValue={100}
-          text={`${percentage}%`}
-        />
-      </div>
-      <div className='hight-light-stats'>
-        <div className='hight-light-stats__number'>{total}</div>
-        <div className='hight-light-stats__type'>
-          <div className='type-image'>
-            {type === 'device' && <Tivi />}
-            {type === 'service' && <Service />}
-            {type === 'numberProvide' && <Service />}
+          // text={`${percentage}%`}
+        >
+          <div className="inner" style={{ height: 45, width: 45 }}>
+            <CircularProgressbarWithChildren
+              styles={buildStyles({
+                pathColor: "#7E7D88",
+                textColor: "#535261",
+                textSize: 22,
+                trailColor: "#EAEAEC",
+              })}
+              value={5}
+              maxValue={100}
+              text={`${`percentage`}%`}
+            />
           </div>
-          <div className='type-name'>
-            {type === 'device' && 'Thiết bị'}
-            {type === 'service' && 'Dịch vụ'}
-            {type === 'numberProvide' && 'Cấp số'}
+        </CircularProgressbarWithChildren>
+      </div>
+      <div className="hight-light-stats">
+        <div className="hight-light-stats__number">{total}</div>
+        <div className="hight-light-stats__type">
+          <div className="type-image">
+            {type === "device" && <Tivi />}
+            {type === "service" && <Service />}
+            {type === "numberProvide" && <Service />}
+          </div>
+          <div className="type-name">
+            {type === "device" && "Thiết bị"}
+            {type === "service" && "Dịch vụ"}
+            {type === "numberProvide" && "Cấp số"}
           </div>
         </div>
       </div>
-      <div className='status'>
-        {typeof active === 'number' && (
-          <div className='status__item acitve'>
+      <div className="status orange">
+        {typeof active === "number" && (
+          <div className="status__item acitve orange">
             <span />
             <span>Đang hoạt động</span>
             <span>{active}</span>
           </div>
         )}
 
-        {typeof inactive === 'number' && (
-          <div className='status__item inactive'>
+        {typeof inactive === "number" && (
+          <div className="status__item inactive blue">
             <span />
             <span>Ngừng hoạt động</span>
             <span>{inactive}</span>
           </div>
         )}
 
-        {typeof ignore === 'number' && (
-          <div className='status__item inactive'>
+        {typeof ignore === "number" && (
+          <div className="status__item inactive green">
             <span />
             <span>Bỏ qua</span>
             <span>{ignore}</span>
