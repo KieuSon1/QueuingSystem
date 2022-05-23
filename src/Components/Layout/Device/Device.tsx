@@ -1,15 +1,18 @@
-import React from "react";
-import Arrowright from "../../../Assets/Arrowright";
-import "./device.scss";
+import React from 'react';
+import Arrowright from '../../../Assets/Arrowright';
+import './device.scss';
 
 const Device = () => {
   return (
     <div className="app__layout-device">
-      <div className="device__text1">Thiết bị</div>
-      <div className="arrow__right">
-        <Arrowright />
+      <div className="sitemap">
+        <div className="device__text1">Thiết bị</div>
+        <div className="arrow__right">
+          <Arrowright />
+        </div>
+        <div className="device__text2">Danh sách thiết bị</div>
       </div>
-      <div className="device__text2">Danh sách thiết bị</div>
+
       <div className="device__title">Danh sách thiết bị</div>
       <div className="status">
         <div className="status1">Trạng thái hoạt động</div>

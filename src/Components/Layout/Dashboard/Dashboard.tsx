@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Outlet } from "react-router";
-import Calendar1 from "../../../Assets/Calendar1";
-import Calendar2 from "../../../Assets/Calendar2";
-import Wait from "../../../Assets/Wait";
-import Passing from "../../../Assets/Passing";
+import React, { useState } from 'react';
+import { Outlet } from 'react-router';
+import Calendar1 from '../../../Assets/Calendar1';
+import Calendar2 from '../../../Assets/Calendar2';
+import Wait from '../../../Assets/Wait';
+import Passing from '../../../Assets/Passing';
 
 import {
   Chart as ChartJS,
@@ -15,12 +15,12 @@ import {
   Tooltip,
   Legend,
   Filler,
-} from "chart.js";
-import { Line } from "react-chartjs-2";
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
 
-import "./dashboard.scss";
-import StatsPanel from "./StatsPanel/StatsPanel";
-import Arrow from "../../../Assets/Arrow";
+import './dashboard.scss';
+import StatsPanel from './StatsPanel/StatsPanel';
+import Arrow from '../../../Assets/Arrow';
 const Counter: React.FC = () => {
   ChartJS.register(
     CategoryScale,
@@ -37,14 +37,14 @@ const Counter: React.FC = () => {
     drawActiveElementsOnTop: false,
     datasets: [
       {
-        label: "",
+        label: '',
         data: [
           25.0, 32.4, 22.2, 39.4, 34.2, 22.0, 23.2, 24.1, 20.0, 18.4, 19.1,
         ],
         fill: true,
         lineTension: 0.4,
-        backgroundColor: "rgba(206, 221, 255, 0.4)",
-        borderColor: "#5185F7",
+        backgroundColor: 'rgba(206, 221, 255, 0.4)',
+        borderColor: '#5185F7',
         borderWidth: 1,
         pointRadius: 1,
       },
