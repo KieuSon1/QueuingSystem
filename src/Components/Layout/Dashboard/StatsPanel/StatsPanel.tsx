@@ -1,7 +1,7 @@
-import React from "react";
-import CalendarView from "../Calendar/CalendarView";
-import SummaryCard from "./SummaryCard";
-import "./statspanel.scss";
+import React from 'react';
+import CalendarView from '../Calendar/CalendarView';
+import SummaryCard from './SummaryCard';
+import './statspanel.scss';
 
 interface summary {
   type: string;
@@ -14,21 +14,21 @@ interface summary {
 
 const summaryData: summary[] = [
   {
-    type: "device",
+    type: 'device',
     percentage: 90,
     total: 4221,
     active: 3799,
     inactive: 422,
   },
   {
-    type: "service",
+    type: 'service',
     percentage: 90,
     total: 4221,
     active: 3799,
     inactive: 422,
   },
   {
-    type: "numberProvide",
+    type: 'numberProvide',
     percentage: 90,
     total: 4221,
     active: 3799,
@@ -38,7 +38,6 @@ const summaryData: summary[] = [
 ];
 
 const StatsPanel: React.FC = () => {
-  const formatDate = (date: Date, format: string) => {};
   return (
     <div className="dashboard__stats">
       <div className="dashboard__stats__label">Tổng quan</div>
