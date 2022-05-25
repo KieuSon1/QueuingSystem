@@ -109,6 +109,116 @@ const tableData: IDeviceRow[] = [
     displayDetail: true,
     displayUpdate: true,
   },
+  {
+    deviceId: 'K2',
+    deviceName: 'Kiosk',
+    ipAddress: '192.169.1.1',
+    isActivated: true,
+    isConnected: true,
+    services: [Service.Dental, Service.Heart],
+    displayDetail: true,
+    displayUpdate: true,
+  },
+  {
+    deviceId: 'KIO_02',
+    deviceName: 'Kiosk2',
+    ipAddress: '192.169.1.2',
+    isActivated: true,
+    isConnected: true,
+    services: [Service.Dental, Service.Heart],
+    displayDetail: false,
+    displayUpdate: false,
+  },
+  {
+    deviceId: 'K2',
+    deviceName: 'Kiosk',
+    ipAddress: '192.169.1.1',
+    isActivated: true,
+    isConnected: true,
+    services: [Service.Dental, Service.Heart],
+    displayDetail: true,
+    displayUpdate: true,
+  },
+  {
+    deviceId: 'K2',
+    deviceName: 'Kiosk',
+    ipAddress: '192.169.1.1',
+    isActivated: true,
+    isConnected: true,
+    services: [Service.Dental, Service.Heart],
+    displayDetail: true,
+    displayUpdate: true,
+  },
+  {
+    deviceId: 'K2',
+    deviceName: 'Kiosk',
+    ipAddress: '192.169.1.1',
+    isActivated: true,
+    isConnected: true,
+    services: [Service.Dental, Service.Heart],
+    displayDetail: true,
+    displayUpdate: true,
+  },
+  {
+    deviceId: 'K2',
+    deviceName: 'Kiosk',
+    ipAddress: '192.169.1.1',
+    isActivated: false,
+    isConnected: true,
+    services: [Service.Dental, Service.Heart],
+    displayDetail: true,
+    displayUpdate: true,
+  },
+  {
+    deviceId: 'K2',
+    deviceName: 'Kiosk',
+    ipAddress: '192.169.1.1',
+    isActivated: false,
+    isConnected: true,
+    services: [Service.Dental, Service.Heart],
+    displayDetail: true,
+    displayUpdate: true,
+  },
+  {
+    deviceId: 'K2',
+    deviceName: 'Kiosk',
+    ipAddress: '192.169.1.1',
+    isActivated: true,
+    isConnected: true,
+    services: [Service.Dental, Service.Heart],
+    displayDetail: true,
+    displayUpdate: true,
+  },
+  {
+    deviceId: 'K2',
+    deviceName: 'Kiosk',
+    ipAddress: '192.169.1.1',
+    isActivated: false,
+    isConnected: true,
+    services: [Service.Dental, Service.Heart],
+    displayDetail: true,
+    displayUpdate: true,
+  },
+  {
+    deviceId: 'K2',
+    deviceName: 'Kiosk',
+    ipAddress: '192.169.1.1',
+    isActivated: true,
+    isConnected: true,
+    services: [Service.Dental, Service.Heart],
+    displayDetail: true,
+    displayUpdate: true,
+  },
+  {
+    deviceId: 'ABC',
+    deviceName: 'Kiosk',
+    ipAddress: '192.169.1.1',
+    isActivated: true,
+    isConnected: true,
+    services: [Service.Dental, Service.Heart],
+    displayDetail: true,
+    displayUpdate: true,
+  },
 ];
 
 const Device: React.FC = () => {
@@ -137,10 +247,7 @@ const Device: React.FC = () => {
           {/* <Textbox label="Từ khoá" /> */}
         </div>
         <div className="row table">
-          <Table data={tableData} />
-        </div>
-        <div className="row pagination">
-          <Pagination data={tableData} />
+          <Table data={tableData} displayRow={9} />
         </div>
       </div>
     </div>

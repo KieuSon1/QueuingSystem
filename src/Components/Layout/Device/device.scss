@@ -39,13 +39,17 @@
   &__container {
     height: 100%;
     width: 100%;
-    padding: 90px 100px 0px 30px;
+    padding: 90px 100px 30px 30px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     box-sizing: border-box;
     overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
     // overflow-x: hidden;
 
     .row {
@@ -64,9 +68,7 @@
     .filters {
       gap: 20px;
     }
-
-    .pagination {
-      justify-content: flex-end;
+    .table {
     }
   }
 }

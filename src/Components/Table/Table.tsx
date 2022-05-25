@@ -1,5 +1,8 @@
 import React from 'react';
+import Pagination from '../Pagination/Pagination';
 import './table.scss';
+import { useState } from 'react';
+import { useEffect } from 'react';
 export enum DeviceActiveStatus {
   Active = 'Hoạt động',
   Inactive = 'Ngưng hoạt động',
@@ -50,78 +53,114 @@ export interface IDeviceRow {
 
 type T = keyof typeof ColumnLabels;
 
-const Table: React.FC<{ data: IDeviceRow[] }> = ({ data }) => {
+const Table: React.FC<{ data: IDeviceRow[]; displayRow?: number }> = ({
+  data,
+  displayRow,
+}) => {
+  const [paginationIndex, setPaginationIndex] = useState(0);
+  const [paginationData, setPaginationData] = useState(
+    data.slice(0, displayRow ? displayRow : 9)
+  );
+
+  useEffect(() => {
+    const newData = data.slice(
+      displayRow ? displayRow * paginationIndex : 9 * paginationIndex,
+      displayRow
+        ? displayRow * (paginationIndex + 1)
+        : 9 * (paginationIndex + 1)
+    );
+    setPaginationData(newData);
+
+    return () => {
+      setPaginationData([]);
+      // setPaginationIndex(0);
+    };
+  }, [paginationIndex]);
+
+  const changeIndex = (index: number) => {
+    setPaginationIndex(index);
+  };
+
   return (
-    <table className="app__table">
-      <thead>
-        <tr>
-          {Object.keys(data[0]).map((column: string) => {
-            return <th>{ColumnLabels[column as T]}</th>;
+    <div className="app__table">
+      <table>
+        <thead>
+          <tr>
+            {Object.keys(paginationData[0]).map((column: string) => {
+              return <th>{ColumnLabels[column as T]}</th>;
+            })}
+          </tr>
+        </thead>
+        <tbody>
+          {paginationData.map((row) => {
+            return (
+              <tr>
+                {Object.values(row).map((value, index) => {
+                  if (index === DisplayedColumns.displayDetail) {
+                    return (
+                      <td>
+                        <a href="#">{value === true && `Chi tiết`}</a>
+                      </td>
+                    );
+                  }
+                  if (index === DisplayedColumns.displayUpdate) {
+                    return (
+                      <td>
+                        <a href="#">{value === true && `Cập nhật`}</a>
+                      </td>
+                    );
+                  }
+                  if (index === DisplayedColumns.isActivated) {
+                    return (
+                      <td>
+                        <div className="row">
+                          <div
+                            className={`status-dot ${
+                              value ? `active` : `inactive`
+                            }`}
+                          ></div>
+                          <span>
+                            {value ? 'Đang hoạt động' : 'Ngưng hoạt động'}
+                          </span>
+                        </div>
+                      </td>
+                    );
+                  }
+                  if (index === DisplayedColumns.isConnected) {
+                    return (
+                      <td>
+                        <div className="row">
+                          <div
+                            className={`status-dot ${
+                              value ? `active` : `inactive`
+                            }`}
+                          ></div>
+                          <span>{value ? 'Kết nối' : 'Mất kết nối'}</span>
+                        </div>
+                      </td>
+                    );
+                  } else {
+                    return (
+                      <td>
+                        <span className={`status-dot`}></span>
+                        <span>{value}</span>
+                      </td>
+                    );
+                  }
+                })}
+              </tr>
+            );
           })}
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((row) => {
-          return (
-            <tr>
-              {Object.values(row).map((value, index) => {
-                if (index === DisplayedColumns.displayDetail) {
-                  return (
-                    <td>
-                      <a href="#">{value === true && `Chi tiết`}</a>
-                    </td>
-                  );
-                }
-                if (index === DisplayedColumns.displayUpdate) {
-                  return (
-                    <td>
-                      <a href="#">{value === true && `Cập nhật`}</a>
-                    </td>
-                  );
-                }
-                if (index === DisplayedColumns.isActivated) {
-                  return (
-                    <td>
-                      <div className="row">
-                        <div
-                          className={`status-dot ${
-                            value ? `active` : `inactive`
-                          }`}
-                        ></div>
-                        <span>
-                          {value ? 'Đang hoạt động' : 'Ngưng hoạt động'}
-                        </span>
-                      </div>
-                    </td>
-                  );
-                }
-                if (index === DisplayedColumns.isConnected) {
-                  return (
-                    <td>
-                      <div className="row">
-                        <div
-                          className={`status-dot ${
-                            value ? `active` : `inactive`
-                          }`}
-                        ></div>
-                        <span>{value ? 'Kết nối' : 'Mất kết nối'}</span>
-                      </div>
-                    </td>
-                  );
-                } else {
-                  return (
-                    <td>
-                      <span className={`status-dot`}></span>
-                      <span>{value}</span>
-                    </td>
-                  );
-                }
-              })}
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+      <div className="pagination">
+        <Pagination
+          data={data}
+          displayRow={displayRow ? displayRow : 9}
+          onChange={changeIndex}
+        />
+      </div>
+    </div>
   );
 };
 
