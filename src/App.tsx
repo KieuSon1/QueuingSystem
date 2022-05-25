@@ -5,7 +5,7 @@ import EditPasswordForm from './Components/Forms/EditPassword-form/EditPasswordF
 import ForgotPasswordForm from './Components/Forms/ForgotPassword-form/ForgotPasswordForm';
 import LoginForm from './Components/Forms/Login-form/LoginForm';
 import Dashboard from './Components/Layout/Dashboard/Dashboard';
-import DetailDevice from './Components/Layout/Device/DetailDevice/ModifyDevice';
+import DetailDevice from './Components/Layout/Device/DetailDevice/DetailDevice';
 import Device from './Components/Layout/Device/Device';
 import ListDevice from './Components/Layout/Device/ListDevice/ListDevice';
 import ModifyDevice from './Components/Layout/Device/ModifyDevice/ModifyDevice';
