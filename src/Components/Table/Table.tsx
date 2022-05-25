@@ -19,8 +19,8 @@ export enum ColumnLabels {
   deviceId = 'Mã thiết bị',
   deviceName = 'Tên thiết bị',
   ipAddress = 'Địa chỉ IP',
-  activeStatus = 'Trạng thái hoạt động',
-  connectStatus = 'Trạng thái kết nối',
+  isActivated = 'Trạng thái hoạt động',
+  isConnected = 'Trạng thái kết nối',
   services = 'Dịch vụ sử dụng',
   displayDetail = 'Chi tiết',
   displayUpdate = 'Cập nhật',
@@ -30,8 +30,8 @@ export enum DisplayedColumns {
   deviceId,
   deviceName,
   ipAddress,
-  activeStatus,
-  connectStatus,
+  isActivated,
+  isConnected,
   services,
   displayDetail,
   displayUpdate,
@@ -41,8 +41,8 @@ export interface IDeviceRow {
   deviceId: string;
   deviceName: string;
   ipAddress: string;
-  activeStatus: DeviceActiveStatus;
-  connectStatus: DeviceConnectionStatus;
+  isActivated: boolean;
+  isConnected: boolean;
   services: Service[];
   displayDetail: boolean;
   displayUpdate: boolean;
@@ -78,8 +78,43 @@ const Table: React.FC<{ data: IDeviceRow[] }> = ({ data }) => {
                       <a href="#">{value === true && `Cập nhật`}</a>
                     </td>
                   );
+                }
+                if (index === DisplayedColumns.isActivated) {
+                  return (
+                    <td>
+                      <div className="row">
+                        <div
+                          className={`status-dot ${
+                            value ? `active` : `inactive`
+                          }`}
+                        ></div>
+                        <span>
+                          {value ? 'Đang hoạt động' : 'Ngưng hoạt động'}
+                        </span>
+                      </div>
+                    </td>
+                  );
+                }
+                if (index === DisplayedColumns.isConnected) {
+                  return (
+                    <td>
+                      <div className="row">
+                        <div
+                          className={`status-dot ${
+                            value ? `active` : `inactive`
+                          }`}
+                        ></div>
+                        <span>{value ? 'Kết nối' : 'Mất kết nối'}</span>
+                      </div>
+                    </td>
+                  );
                 } else {
-                  return <td>{value}</td>;
+                  return (
+                    <td>
+                      <span className={`status-dot`}></span>
+                      <span>{value}</span>
+                    </td>
+                  );
                 }
               })}
             </tr>
