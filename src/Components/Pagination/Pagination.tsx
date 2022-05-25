@@ -5,10 +5,18 @@ import { useState } from 'react';
 
 const Pagination: React.FC<{
   data?: Array<any>;
-  noPage?: number;
+  displayRow: number;
   onChange?: Function;
-}> = ({ noPage, onChange, data }) => {
+}> = ({ displayRow, onChange, data }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const changeIndex = (index: number): void => {
+    if (onChange) {
+      onChange(index);
+    }
+
+    setSelectedIndex(index);
+  };
   return (
     <div className="app__pagination">
       <div className="app__pagination__btn prev">
@@ -17,10 +25,11 @@ const Pagination: React.FC<{
       <div className="app__pagination__indexes">
         {data &&
           data.map((item, index) => {
-            if (index <= 6) {
+            if (index <= Math.ceil(data.length / displayRow) - 1) {
               return (
                 <div
                   className={`index ${index === selectedIndex && `selected`}`}
+                  onClick={() => changeIndex(index)}
                 >
                   {index + 1}
                 </div>
