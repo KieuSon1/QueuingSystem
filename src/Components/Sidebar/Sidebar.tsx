@@ -14,7 +14,7 @@ import { ReactComponent as SignOutIc } from '../../Assets/signout.svg';
 const items = [
   { name: 'Dashboard', icon: <DashboardIc />, path: 'panel' },
   { name: 'Thiết bị', icon: <DeviceIc />, path: 'device/list' },
-  { name: 'Dịch vụ', icon: <ServiceIc /> },
+  { name: 'Dịch vụ', icon: <ServiceIc />, path: 'service/list' },
   { name: 'Cấp số', icon: <NumberIc /> },
   { name: 'Báo cáo', icon: <ReportIc /> },
   { name: 'Cài đặt hệ thống', icon: <SettingIc /> },

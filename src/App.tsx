@@ -10,6 +10,8 @@ import Device from './Components/Layout/Device/Device';
 import ListDevice from './Components/Layout/Device/ListDevice/ListDevice';
 import ModifyDevice from './Components/Layout/Device/ModifyDevice/ModifyDevice';
 import NewDevice from './Components/Layout/Device/NewDevice/NewDevice';
+import ListService from './Components/Layout/Service/ListService/ListService';
+import Service from './Components/Layout/Service/Service';
 import UserInfo from './Components/Layout/UserInfo/UserInfo';
 import DashboardPage from './Pages/Dashboard/DashboardPage';
 import LoginPage from './Pages/Login/LoginPage';
@@ -30,6 +32,9 @@ const App: React.FC = () => {
             <Route path="new" element={<NewDevice />} />
             <Route path="modify" element={<ModifyDevice />} />
             <Route path="detail" element={<DetailDevice />} />
+          </Route>
+          <Route path="service" element={<Service />}>
+            <Route path="list" element={<ListService />} />
           </Route>
           <Route path="user-info" element={<UserInfo />} />
         </Route>
