@@ -82,7 +82,7 @@ const Table: React.FC<{ data: IDeviceRow[]; displayRow?: number }> = ({
   };
 
   return (
-    <div className="app__table">
+    <div className='app__table'>
       <table>
         <thead>
           <tr>
@@ -99,21 +99,21 @@ const Table: React.FC<{ data: IDeviceRow[]; displayRow?: number }> = ({
                   if (index === DisplayedColumns.displayDetail) {
                     return (
                       <td>
-                        <a href="#">{value === true && `Chi tiết`}</a>
+                        <a href='#'>{value === true && `Chi tiết`}</a>
                       </td>
                     );
                   }
                   if (index === DisplayedColumns.displayUpdate) {
                     return (
                       <td>
-                        <a href="#">{value === true && `Cập nhật`}</a>
+                        <a href='#'>{value === true && `Cập nhật`}</a>
                       </td>
                     );
                   }
                   if (index === DisplayedColumns.isActivated) {
                     return (
                       <td>
-                        <div className="row">
+                        <div className='row'>
                           <div
                             className={`status-dot ${
                               value ? `active` : `inactive`
@@ -129,7 +129,7 @@ const Table: React.FC<{ data: IDeviceRow[]; displayRow?: number }> = ({
                   if (index === DisplayedColumns.isConnected) {
                     return (
                       <td>
-                        <div className="row">
+                        <div className='row'>
                           <div
                             className={`status-dot ${
                               value ? `active` : `inactive`
@@ -153,7 +153,7 @@ const Table: React.FC<{ data: IDeviceRow[]; displayRow?: number }> = ({
           })}
         </tbody>
       </table>
-      <div className="pagination">
+      <div className='pagination'>
         <Pagination
           data={data}
           displayRow={displayRow ? displayRow : 9}

@@ -16,22 +16,22 @@ import LoginPage from './Pages/Login/LoginPage';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className='App'>
       <Routes>
-        <Route path="/" element={<LoginPage />}>
-          <Route path="login" element={<LoginForm />} />
-          <Route path="forgot-password" element={<ForgotPasswordForm />} />
-          <Route path="edit-password" element={<EditPasswordForm />} />
+        <Route path='/' element={<LoginPage />}>
+          <Route path='login' element={<LoginForm />} />
+          <Route path='forgot-password' element={<ForgotPasswordForm />} />
+          <Route path='edit-password' element={<EditPasswordForm />} />
         </Route>
-        <Route path="/dashboard" element={<DashboardPage />}>
-          <Route path="panel" element={<Dashboard />} />
-          <Route path="device" element={<Device />}>
-            <Route path="list" element={<ListDevice />} />
-            <Route path="new" element={<NewDevice />} />
-            <Route path="modify" element={<ModifyDevice />} />
-            <Route path="detail" element={<DetailDevice />} />
+        <Route path='/dashboard' element={<DashboardPage />}>
+          <Route path='panel' element={<Dashboard />} />
+          <Route path='device' element={<Device />}>
+            <Route path='list' element={<ListDevice />} />
+            <Route path='new' element={<NewDevice />} />
+            <Route path='modify' element={<ModifyDevice />} />
+            <Route path='detail' element={<DetailDevice />} />
           </Route>
-          <Route path="user-info" element={<UserInfo />} />
+          <Route path='user-info' element={<UserInfo />} />
         </Route>
       </Routes>
     </div>
