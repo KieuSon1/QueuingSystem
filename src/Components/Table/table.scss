@@ -39,6 +39,33 @@ table {
     height: 49px;
     td {
       padding-left: 8px;
+      font-family: Nunito;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+
+      .row {
+        height: inherit;
+        width: inherit;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+      }
+
+      .status-dot {
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+      }
+
+      .active {
+        background-color: $green;
+      }
+      .inactive {
+        background-color: $red;
+      }
 
       &:not(:last-child) {
         border-right: 1px solid #ffe3cd;

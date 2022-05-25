@@ -1,13 +1,8 @@
 import React from 'react';
 import { ReactComponent as ArrowIc } from '../../../Assets/arrow.svg';
+import Pagination from '../../Pagination/Pagination';
 import Select from '../../Select/Select';
-import Table, {
-  DeviceActiveStatus,
-  DeviceConnectionStatus,
-  IDeviceRow,
-  Service,
-} from '../../Table/Table';
-import Textbox from '../../Textbox/Textbox';
+import Table, { IDeviceRow, Service } from '../../Table/Table';
 import './device.scss';
 
 const activeStatus = ['Tất cả', 'Hoạt động', 'Ngưng hoạt động'];
@@ -18,8 +13,8 @@ const tableData: IDeviceRow[] = [
     deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
-    activeStatus: DeviceActiveStatus.Active,
-    connectStatus: DeviceConnectionStatus.Connecting,
+    isActivated: true,
+    isConnected: true,
     services: [Service.Dental, Service.Heart],
     displayDetail: true,
     displayUpdate: true,
@@ -28,8 +23,18 @@ const tableData: IDeviceRow[] = [
     deviceId: 'KIO_02',
     deviceName: 'Kiosk2',
     ipAddress: '192.169.1.2',
-    activeStatus: DeviceActiveStatus.Active,
-    connectStatus: DeviceConnectionStatus.Connecting,
+    isActivated: true,
+    isConnected: true,
+    services: [Service.Dental, Service.Heart],
+    displayDetail: false,
+    displayUpdate: false,
+  },
+  {
+    deviceId: 'KIO_01',
+    deviceName: 'Kiosk',
+    ipAddress: '192.169.1.1',
+    isActivated: true,
+    isConnected: true,
     services: [Service.Dental, Service.Heart],
     displayDetail: true,
     displayUpdate: true,
@@ -38,8 +43,8 @@ const tableData: IDeviceRow[] = [
     deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
-    activeStatus: DeviceActiveStatus.Active,
-    connectStatus: DeviceConnectionStatus.Connecting,
+    isActivated: true,
+    isConnected: true,
     services: [Service.Dental, Service.Heart],
     displayDetail: true,
     displayUpdate: true,
@@ -48,8 +53,8 @@ const tableData: IDeviceRow[] = [
     deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
-    activeStatus: DeviceActiveStatus.Active,
-    connectStatus: DeviceConnectionStatus.Connecting,
+    isActivated: true,
+    isConnected: true,
     services: [Service.Dental, Service.Heart],
     displayDetail: true,
     displayUpdate: true,
@@ -58,8 +63,8 @@ const tableData: IDeviceRow[] = [
     deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
-    activeStatus: DeviceActiveStatus.Active,
-    connectStatus: DeviceConnectionStatus.Connecting,
+    isActivated: false,
+    isConnected: true,
     services: [Service.Dental, Service.Heart],
     displayDetail: true,
     displayUpdate: true,
@@ -68,8 +73,8 @@ const tableData: IDeviceRow[] = [
     deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
-    activeStatus: DeviceActiveStatus.Active,
-    connectStatus: DeviceConnectionStatus.Connecting,
+    isActivated: true,
+    isConnected: true,
     services: [Service.Dental, Service.Heart],
     displayDetail: true,
     displayUpdate: true,
@@ -78,8 +83,8 @@ const tableData: IDeviceRow[] = [
     deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
-    activeStatus: DeviceActiveStatus.Active,
-    connectStatus: DeviceConnectionStatus.Connecting,
+    isActivated: false,
+    isConnected: true,
     services: [Service.Dental, Service.Heart],
     displayDetail: true,
     displayUpdate: true,
@@ -88,8 +93,8 @@ const tableData: IDeviceRow[] = [
     deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
-    activeStatus: DeviceActiveStatus.Active,
-    connectStatus: DeviceConnectionStatus.Connecting,
+    isActivated: true,
+    isConnected: true,
     services: [Service.Dental, Service.Heart],
     displayDetail: true,
     displayUpdate: true,
@@ -98,18 +103,8 @@ const tableData: IDeviceRow[] = [
     deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
-    activeStatus: DeviceActiveStatus.Active,
-    connectStatus: DeviceConnectionStatus.Connecting,
-    services: [Service.Dental, Service.Heart],
-    displayDetail: true,
-    displayUpdate: true,
-  },
-  {
-    deviceId: 'KIO_01',
-    deviceName: 'Kiosk',
-    ipAddress: '192.169.1.1',
-    activeStatus: DeviceActiveStatus.Active,
-    connectStatus: DeviceConnectionStatus.Connecting,
+    isActivated: true,
+    isConnected: true,
     services: [Service.Dental, Service.Heart],
     displayDetail: true,
     displayUpdate: true,
@@ -143,6 +138,9 @@ const Device: React.FC = () => {
         </div>
         <div className="row table">
           <Table data={tableData} />
+        </div>
+        <div className="row pagination">
+          <Pagination data={tableData} />
         </div>
       </div>
     </div>
