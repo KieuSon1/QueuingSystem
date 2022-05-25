@@ -4,6 +4,7 @@ import Pagination from '../Pagination/Pagination';
 import './table.scss';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 export enum DeviceActiveStatus {
   Active = 'Hoạt động',
   Inactive = 'Ngưng hoạt động',
@@ -125,14 +126,18 @@ const Table: React.FC<{ data: Array<any>; displayRow?: number }> = ({
                   if (index === DisplayedColumns.displayDetail) {
                     return (
                       <td>
-                        <a href="#">{value === true && `Chi tiết`}</a>
+                        {value === true && (
+                          <Link to={'/dashboard/device/modify'}>Chi tiết</Link>
+                        )}
                       </td>
                     );
                   }
                   if (index === DisplayedColumns.displayUpdate) {
                     return (
                       <td>
-                        <a href="#">{value === true && `Cập nhật`}</a>
+                        {value === true && (
+                          <Link to={'/dashboard/device/modify'}>Cập nhật</Link>
+                        )}
                       </td>
                     );
                   }
