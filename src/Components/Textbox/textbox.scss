@@ -2,6 +2,7 @@
 
 .app__text-box {
   width: 100%;
+  flex: 1;
   height: fit-content;
   &__label {
     color: $text;

@@ -9,20 +9,11 @@ const DetailDevice: React.FC = () => {
     <div className='detail-device'>
       <div className='title'>Quản lý thiết bị</div>
       <div className='container'>
-        <div className='container__info-device'>Thông tin thiết bị</div>
-        <div className='detail__col'>
-          <div className='detail__col__left'>
-            <div className='mathietbi'>Mã thiết bị:</div>
-            <div className='tenthietbi'>Tên thiết bị:</div>
-            <div className='diachiIp'>Địa chỉ IP:</div>
-          </div>
-          <div className='detail__col__right'>
-            <div className='loaithietbi'>Loại thiết bị:</div>
-            <div className='tendangnhap'>Tên đăng nhập:</div>
-            <div className='matkhau'>Mật khẩu:</div>
-          </div>
-        </div>
-        <div className='dichvusudung'>Dịch vụ sử dụng:</div>
+        <div className='row form-label'>Thông tin thiết bị</div>
+        <div className="row"><div className='flex-1'>Mã thiết bị:</div><div className='flex-1'>Loại thiết bị:</div></div>
+        <div className="row"><div className='flex-1'>Tên thiết bị:</div><div className='flex-1'>Tên đăng nhập:</div></div>
+        <div className="row"><div className='flex-1'>Địa chỉ IP:</div><div className='flex-1'>Mật khẩu:</div></div>
+        <div className="row"><div className='flex-1'>Dịch vụ sử dụng:</div></div>
       </div>
       <div
         className='add-device-btn'

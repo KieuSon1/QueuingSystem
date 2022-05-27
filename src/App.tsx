@@ -10,7 +10,10 @@ import Device from './Components/Layout/Device/Device';
 import ListDevice from './Components/Layout/Device/ListDevice/ListDevice';
 import ModifyDevice from './Components/Layout/Device/ModifyDevice/ModifyDevice';
 import NewDevice from './Components/Layout/Device/NewDevice/NewDevice';
+import DetailService from './Components/Layout/Service/DetailService/DetailService';
 import ListService from './Components/Layout/Service/ListService/ListService';
+import ModifyService from './Components/Layout/Service/ModifyService/ModifyService';
+import NewService from './Components/Layout/Service/NewService/NewService';
 import Service from './Components/Layout/Service/Service';
 import UserInfo from './Components/Layout/UserInfo/UserInfo';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
@@ -36,6 +39,9 @@ const App: React.FC = () => {
               <Route path='detail' element={<DetailDevice />} />
             </Route>
             <Route path='service' element={<Service />}>
+              <Route path='new' element={<NewService />} />
+              <Route path='detail' element={<DetailService />} />
+              <Route path='modify' element={<ModifyService />} />
               <Route path='list' element={<ListService />} />
             </Route>
             <Route path='user-info' element={<UserInfo />} />

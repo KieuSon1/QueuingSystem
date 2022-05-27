@@ -18,19 +18,15 @@ const NewDevice: React.FC = () => {
         <div className="row">* Là trường thông tin bắt buộc</div>
       </div>
       <div className="btn__bottom">
-        <div className="cancel">
           <Button
             text='Hủy bỏ'
             isOutlined
             onClick={() => navigate('/dashboard/device/list')}
           />
-        </div>
-        <div className='add__device'>
           <Button
             text='Thêm thiết bị'
             onClick={() => navigate('/dashboard/device/list')}
           />
-        </div>
       </div>
     </div>
   );
