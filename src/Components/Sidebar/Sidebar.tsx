@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
-import LogoSm from '../../Assets/LogoSm';
+import { ReactComponent as LogosmIc } from '../../Assets/logosm.svg';
 import './sidebar.scss';
 import { ReactComponent as DashboardIc } from '../../Assets/dashboard.svg';
 import { ReactComponent as DeviceIc } from '../../Assets/device.svg';
@@ -23,29 +23,30 @@ const items = [
 ];
 const Sidebar: React.FC = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch()
-  const signOut = ():void => {
-    dispatch(logout())
-    navigate("/login")
-  }
+  const dispatch = useDispatch();
+  const signOut = (): void => {
+    dispatch(logout());
+    navigate('/login');
+  };
   const location = useLocation();
-  const [path, setPath] = useState<string>("");
+  const [path, setPath] = useState<string>('');
   useEffect(() => {
     const arr = location.pathname.split('/');
     setPath(arr[2]);
-    
-  },[path, location]);
+  }, [path, location]);
 
   return (
     <div className='app__sidebar'>
       <div className='app__sidebar__logo'>
-        <LogoSm />
+        <LogosmIc />
       </div>
       <div className='app__sidebar__items-container'>
         {items.map((item) => {
           return (
             <div
-              className={`menu-item ${item.path?.includes(path) ? `selected` : ``}`}
+              className={`menu-item ${
+                item.path?.includes(path) ? `selected` : ``
+              }`}
               key={item.name}
               onClick={() => navigate(`${item.path ? item.path : ``}`)}
             >
