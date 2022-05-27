@@ -219,7 +219,7 @@ const ListService: React.FC = () => {
       </div>
       <div
         className='add-service-btn'
-        onClick={() => navigate('/dashboard/device/new')}
+        onClick={() => navigate('/dashboard/service/new')}
       >
         <span>
           <AddIc />
