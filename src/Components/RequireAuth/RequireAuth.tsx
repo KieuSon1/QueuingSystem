@@ -7,12 +7,12 @@ const RequireAuth: React.FC<{children?: JSX.Element}> = ({children}) => {
     const user = useSelector((state: RootState)=> state.user)
     const navigate = useNavigate()
     useEffect(() => {
-        if (!user.email || user.email !== "") {
-            navigate("/login")
-            console.log("sign out")
-        } else {
-            console.log("logged in")
-        }
+        // if (!user.email || user.email !== "") {
+        //     navigate("/login")
+        //     console.log("sign out")
+        // } else {
+        //     console.log("logged in")
+        // }
     }, [])
   return children || <></>
 }

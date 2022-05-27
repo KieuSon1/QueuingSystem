@@ -13,6 +13,7 @@ import NewDevice from './Components/Layout/Device/NewDevice/NewDevice';
 import ListService from './Components/Layout/Service/ListService/ListService';
 import Service from './Components/Layout/Service/Service';
 import UserInfo from './Components/Layout/UserInfo/UserInfo';
+import Number from './Components/Number/Number';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import DashboardPage from './Pages/Dashboard/DashboardPage';
 import LoginPage from './Pages/Login/LoginPage';
@@ -22,27 +23,28 @@ const App: React.FC = () => {
     <div className="App">
       <RequireAuth>
         <Routes>
-        <Route path="/" element={<LoginPage />}>
-          <Route path="login" element={<LoginForm />} />
-          <Route path="forgot-password" element={<ForgotPasswordForm />} />
-          <Route path="edit-password" element={<EditPasswordForm />} />
-        </Route>
-        <Route path="/dashboard" element={<DashboardPage />}>
-          <Route path="panel" element={<Dashboard />} />
-          <Route path="device" element={<Device />}>
-            <Route path="list" element={<ListDevice />} />
-            <Route path="new" element={<NewDevice />} />
-            <Route path="modify" element={<ModifyDevice />} />
-            <Route path="detail" element={<DetailDevice />} />
+          <Route path="/" element={<LoginPage />}>
+            <Route path="login" element={<LoginForm />} />
+            <Route path="forgot-password" element={<ForgotPasswordForm />} />
+            <Route path="edit-password" element={<EditPasswordForm />} />
           </Route>
-          <Route path="service" element={<Service />}>
-            <Route path="list" element={<ListService />} />
+          <Route path="/dashboard" element={<DashboardPage />}>
+            <Route path="panel" element={<Dashboard />} />
+            <Route path="device" element={<Device />}>
+              <Route path="list" element={<ListDevice />} />
+              <Route path="new" element={<NewDevice />} />
+              <Route path="modify" element={<ModifyDevice />} />
+              <Route path="detail" element={<DetailDevice />} />
+              <Route path='number' element={<Number />} />  
           </Route>
-          <Route path="user-info" element={<UserInfo />} />
-        </Route>
-      </Routes>
+            <Route path="service" element={<Service />}>
+              <Route path="list" element={<ListService />} />
+            </Route>
+            <Route path="user-info" element={<UserInfo />} />
+          </Route>
+        </Routes>
       </RequireAuth>
-      
+
     </div>
   );
 };
