@@ -29,10 +29,10 @@ const App: React.FC = () => {
     <div className='App'>
       <RequireAuth>
         <Routes>
-          <Route path="/" element={<LoginPage />}>
-            <Route path="login" element={<LoginForm />} />
-            <Route path="forgot-password" element={<ForgotPasswordForm />} />
-            <Route path="edit-password" element={<EditPasswordForm />} />
+          <Route path='/' element={<LoginPage />}>
+            <Route path='login' element={<LoginForm />} />
+            <Route path='forgot-password' element={<ForgotPasswordForm />} />
+            <Route path='edit-password' element={<EditPasswordForm />} />
           </Route>
           <Route path='/dashboard' element={<DashboardPage />}>
             <Route path='panel' element={<Dashboard />} />
@@ -56,7 +56,6 @@ const App: React.FC = () => {
           </Route>
         </Routes>
       </RequireAuth>
-
     </div>
   );
 };
