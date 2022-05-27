@@ -153,7 +153,6 @@ const change = (newValue: string) => {
 const Dashboard: React.FC = () => {
   return (
     <div className='app__layout-dashboard'>
-      <div className='app__layout-dashboard__sitemap'>Dashboard</div>
       <Counter />
       <StatsPanel />
     </div>

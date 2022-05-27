@@ -8,34 +8,6 @@
   position: relative;
   // overflow-y: scroll;;
 
-  .sitemap {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    span {
-      display: flex;
-      align-items: center;
-      font-family: Nunito;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 30px;
-      color: $orange;
-      svg {
-        path {
-          fill: $text;
-        }
-      }
-      &:first-child {
-        color: $text;
-      }
-    }
-  }
-
   .content {
     height: 100%;
     width: 100%;
