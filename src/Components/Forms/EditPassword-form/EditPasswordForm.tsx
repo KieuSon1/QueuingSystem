@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router'
 import Logo from '../../../Assets/Logo'
 import Button from '../../Button/Button'
-import Textbox from '../../Textbox/Textbox'
+import Textbox, { InputType } from '../../Textbox/Textbox'
 import "./editpasswordform.scss"
 
 const EditPasswordForm: React.FC = () => {
@@ -14,8 +14,8 @@ const EditPasswordForm: React.FC = () => {
         </div>
         <div className="edit-password-form-middle">
             <div className="label">Đặt lại mật khẩu mới</div>
-          <Textbox label="Mật khẩu" isPassword />
-          <Textbox label="Nhập lại mật khẩu" isPassword />
+          <Textbox label="Mật khẩu" type={InputType.password} />
+          <Textbox label="Nhập lại mật khẩu" type={InputType.password} />
         </div>
         <div className="edit-password-form-bottom">
           <Button  text="Xác nhận" onClick={() => navigate("/login")}/>

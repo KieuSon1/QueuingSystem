@@ -1,3 +1,4 @@
+@import '../../../../scss/color';
 .detail-device {
   height: 100%;
   width: 100%;
@@ -5,13 +6,25 @@
 
 .title {
   height: 36px;
-  width: 169px;
+  width: 172px;
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
+  color: $orange;
+  padding-top: 25px;
 }
 
 .container {
+  height: 550px;
+  width: 1152px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  background-color: $background;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
   .container__info-device {
     height: 30px;
     width: 165px;
@@ -19,8 +32,6 @@
     font-weight: 700;
     line-height: 30px;
     color: #ff9138;
-    padding-top: 16px;
-    margin-left: 24px;
   }
   .detail__col {
     display: flex;
@@ -31,7 +42,6 @@
       font-size: 16px;
       font-weight: 600;
       line-height: 24px;
-      margin-left: 24px;
       .mathietbi {
         margin-top: 7px;
       }

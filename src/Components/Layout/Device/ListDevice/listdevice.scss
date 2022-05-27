@@ -26,6 +26,10 @@
 
   .filters {
     gap: 20px;
+
+    .app__text-box {
+      margin-left: auto;
+    }
   }
   .table {
     height: fit-content;

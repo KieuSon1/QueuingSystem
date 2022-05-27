@@ -4,6 +4,7 @@ import Table, { IDeviceRow, Service } from '../../../Table/Table';
 import { ReactComponent as AddIc } from '../../../../Assets/add-square.svg';
 import './listdevice.scss';
 import { useNavigate } from 'react-router';
+import Textbox, { InputType } from '../../../Textbox/Textbox';
 
 const activeStatus = ['Tất cả', 'Hoạt động', 'Ngưng hoạt động'];
 const connectionStatus = ['Tất cả', 'Kết nối', 'Mất kết nối'];
@@ -238,7 +239,7 @@ const ListDevice = () => {
             options={connectionStatus}
             width={300}
           />
-          {/* <Textbox label="Từ khoá" /> */}
+          <Textbox label="Từ khoá" type={InputType.search} boxWidth={300}/>
         </div>
         <div className="row table">
           <Table data={tableData} displayRow={9} />

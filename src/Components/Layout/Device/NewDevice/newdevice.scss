@@ -18,48 +18,38 @@
 .container {
   height: 550px;
   width: 1152px;
+  padding: 16px 24px;
   border-radius: 16px;
   background-color: $background;
   margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
 
-  .container__info-divice {
-    height: 30px;
-    width: 162px;
+  .form-label {
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
     color: $orange;
-    padding-left: 24px;
-    padding-top: 16px;
   }
-}
-
-.col {
-  display: flex;
-  flex-direction: row;
-
-  .col__left {
-    padding-left: 24px;
-    width: 540px;
-    height: 44px;
-    padding-top: 20px;
+  .row {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
   }
 
-  .col__right {
-    padding-left: 24px;
-    width: 540px;
-    height: 44px;
-    padding-top: 20px;
+  .app__text-box__label {
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
   }
-}
-
-.use-service {
-  height: 44px;
-  width: 1104px;
-  border-radius: 8px;
-  padding: 10px, 270px, 10px, 12px;
-  padding-top: 200px;
-  padding-left: 24px;
 }
 
 .note {
@@ -75,6 +65,7 @@
 .btn__bottom {
   display: flex;
   flex-direction: row;
+  margin-top: 20px;
   :hover {
     cursor: pointer;
   }

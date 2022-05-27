@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNavigate } from 'react-router';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router';
 import LogoSm from '../../Assets/LogoSm';
 import './sidebar.scss';
 import { ReactComponent as DashboardIc } from '../../Assets/dashboard.svg';
@@ -28,6 +28,13 @@ const Sidebar = () => {
     dispatch(logout())
     navigate("/login")
   }
+  const location = useLocation();
+  const [path, setPath] = useState<string>("");
+  useEffect(() => {
+    const arr = location.pathname.split('/');
+    setPath(arr[2]);
+    
+  },[path, location]);
 
   return (
     <div className="app__sidebar">
@@ -38,7 +45,7 @@ const Sidebar = () => {
         {items.map((item) => {
           return (
             <div
-              className="menu-item"
+              className={`menu-item ${item.path?.includes(path) ? `selected` : ``}`}
               key={item.name}
               onClick={() => navigate(`${item.path ? item.path : ``}`)}
             >

@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import Logo from '../../../Assets/Logo';
 import Button from '../../Button/Button';
-import Textbox from '../../Textbox/Textbox';
+import Textbox, { InputType } from '../../Textbox/Textbox';
 import './loginform.scss';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -48,7 +48,7 @@ const LoginForm: React.FC = () => {
       <div className="login-form-middle">
         {error !== "" && <div className="error">{error}</div>}
         <Textbox label="Email đăng nhập *" value={email} onChange={setEmail} />
-        <Textbox label="Mật khẩu *" isPassword value={password} onChange={setPassword}/>
+        <Textbox label="Mật khẩu *" type={InputType.password} value={password} onChange={setPassword}/>
         <div
           className="forgot-password"
           onClick={() => navigate('/forgot-password')}
