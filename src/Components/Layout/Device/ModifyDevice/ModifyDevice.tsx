@@ -6,7 +6,7 @@ import Textbox from '../../../Textbox/Textbox';
 import './modifydevice.scss';
 
 const typeofDevice = ['Kiosk', 'Display counter'];
-const ModifyDevice = () => {
+const ModifyDevice: React.FC = () => {
   const navigate = useNavigate();
   return (
     <div className='modify-device'>

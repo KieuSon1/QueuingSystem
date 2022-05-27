@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import './detaildevice.scss';
 import { ReactComponent as AddIc } from '../../../../Assets/add-square.svg';
 
-const DetailDevice = () => {
+const DetailDevice: React.FC = () => {
   const navigate = useNavigate();
   return (
     <div className='detail-device'>

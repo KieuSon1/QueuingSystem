@@ -4,7 +4,7 @@ import Button from '../../../Button/Button';
 import Textbox from '../../../Textbox/Textbox';
 import './newdevice.scss';
 
-const NewDevice = () => {
+const NewDevice: React.FC = () => {
   const navigate = useNavigate();
   return (
     <div className='new-device'>

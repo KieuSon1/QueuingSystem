@@ -11,214 +11,214 @@ const tableData: IServiceRow[] = [
   {
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'KIO_02',
     serviceName: 'Kiosk2',
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: false,
-    displayUpdate: false,
+    serviceDetail: false,
+    serviceUpdate: false,
   },
   {
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
-  },
-  {
-    serviceId: 'KIO_01',
-    serviceName: 'Kiosk',
-
-    serviceDetail: 'Chi tiết dịch vụ',
-    isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
+    isActivated: true,
+    serviceDetail: true,
+    serviceUpdate: true,
+  },
+  {
+    serviceId: 'KIO_01',
+    serviceName: 'Kiosk',
+
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: false,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: false,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'KIO_02',
     serviceName: 'Kiosk2',
     isActivated: true,
-    serviceDetail: 'Chi tiết dịch vụ',
-    displayDetail: false,
-    displayUpdate: false,
+    serviceDescribe: 'Chi tiết dịch vụ',
+    serviceDetail: false,
+    serviceUpdate: false,
   },
   {
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: false,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: false,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: false,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'K2',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
   {
     serviceId: 'ABC',
     serviceName: 'Kiosk',
 
-    serviceDetail: 'Chi tiết dịch vụ',
+    serviceDescribe: 'Chi tiết dịch vụ',
     isActivated: true,
-    displayDetail: true,
-    displayUpdate: true,
+    serviceDetail: true,
+    serviceUpdate: true,
   },
 ];
-const ListService = () => {
+const ListService: React.FC = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="service-list">
-        <div className="row label">Danh sách dịch vụ</div>
-        <div className="row filters">
+      <div className='service-list'>
+        <div className='row label'>Danh sách dịch vụ</div>
+        <div className='row filters'>
           <Select
-            label="Trạng thái hoạt động"
+            label='Trạng thái hoạt động'
             options={activeStatus}
             width={300}
           />
           <Select
-            label="Trạng thái kết nối"
+            label='Trạng thái kết nối'
             options={connectionStatus}
             width={300}
           />
           {/* <Textbox label="Từ khoá" /> */}
         </div>
-        <div className="row table">
+        <div className='row table'>
           <Table data={tableData} displayRow={9} />
         </div>
       </div>
       <div
-        className="add-service-btn"
+        className='add-service-btn'
         onClick={() => navigate('/dashboard/device/new')}
       >
         <span>

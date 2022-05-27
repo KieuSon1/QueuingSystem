@@ -3,15 +3,16 @@ import Eye from '../../Assets/Eye';
 import './textbox.scss';
 
 const Textbox: React.FC<{
-  label: string;
+  label?: string;
   isPassword?: boolean;
   value?: string;
-}> = ({ label, isPassword, value }) => {
+  onChange?: Function
+}> = ({ label, isPassword, value, onChange }) => {
   return (
     <div className="app__text-box">
       <div className="app__text-box__label">{label}</div>
       <div className="app__text-box__input">
-        <input type={`${isPassword ? `password` : `text`}`} value={value} />
+        <input type={`${isPassword ? `password` : `text`}`} value={value} onChange={(e) => onChange && onChange(e.target.value)} autoComplete="new-password"/>
         {isPassword && (
           <div className="eye-icon">
             <svg

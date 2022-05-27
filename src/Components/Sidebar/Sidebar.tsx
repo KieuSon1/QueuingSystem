@@ -10,6 +10,8 @@ import { ReactComponent as ReportIc } from '../../Assets/report.svg';
 import { ReactComponent as SettingIc } from '../../Assets/setting.svg';
 
 import { ReactComponent as SignOutIc } from '../../Assets/signout.svg';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../redux/userSlice';
 
 const items = [
   { name: 'Dashboard', icon: <DashboardIc />, path: 'panel' },
@@ -19,30 +21,35 @@ const items = [
   { name: 'Báo cáo', icon: <ReportIc /> },
   { name: 'Cài đặt hệ thống', icon: <SettingIc /> },
 ];
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const signOut = (): void => {
+    dispatch(logout());
+    navigate('/login');
+  };
 
   return (
-    <div className="app__sidebar">
-      <div className="app__sidebar__logo">
+    <div className='app__sidebar'>
+      <div className='app__sidebar__logo'>
         <LogoSm />
       </div>
-      <div className="app__sidebar__items-container">
+      <div className='app__sidebar__items-container'>
         {items.map((item) => {
           return (
             <div
-              className="menu-item"
+              className='menu-item'
               key={item.name}
               onClick={() => navigate(`${item.path ? item.path : ``}`)}
             >
-              <div className="menu-item__icon">{item.icon}</div>
-              <div className="menu-item__name">{item.name}</div>
+              <div className='menu-item__icon'>{item.icon}</div>
+              <div className='menu-item__name'>{item.name}</div>
             </div>
           );
         })}
       </div>
-      <div className="app__sidebar__sign-out">
-        <button onClick={() => navigate('/login')}>
+      <div className='app__sidebar__sign-out'>
+        <button onClick={() => signOut()}>
           <span>
             <SignOutIc />
           </span>
