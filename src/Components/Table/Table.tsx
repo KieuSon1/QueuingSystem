@@ -15,9 +15,9 @@ export enum DeviceConnectionStatus {
   Disconnected = 'Mất kết nối',
 }
 export enum QueueStatus {
-  pending,
-  used,
-  aborted,
+  pending = "Đang chờ",
+  used = "Đã sử dụng",
+  aborted = "Đã huỷ",
 }
 export enum Service {
   Heart = 'Tim mạch',
@@ -107,6 +107,11 @@ export interface IQueueRow {
   queueDetail: boolean;
 }
 
+export interface IServiceQueue {
+  no: number;
+  queueStatus: QueueStatus;
+}
+
 type T = keyof typeof ColumnLabels;
 
 const Table: React.FC<{ data: Array<any>; displayRow?: number }> = ({
@@ -156,9 +161,8 @@ const Table: React.FC<{ data: Array<any>; displayRow?: number }> = ({
                       <td>
                         <div className='row'>
                           <div
-                            className={`status-dot ${
-                              entry[1] ? `active` : `inactive`
-                            }`}
+                            className={`status-dot ${entry[1] ? `active` : `inactive`
+                              }`}
                           ></div>
                           <span>
                             {entry[1] ? 'Đang hoạt động' : 'Ngưng hoạt động'}
@@ -172,9 +176,8 @@ const Table: React.FC<{ data: Array<any>; displayRow?: number }> = ({
                       <td>
                         <div className='row'>
                           <div
-                            className={`status-dot ${
-                              entry[1] ? `active` : `inactive`
-                            }`}
+                            className={`status-dot ${entry[1] ? `active` : `inactive`
+                              }`}
                           ></div>
                           <span>{entry[1] ? 'Kết nối' : 'Mất kết nối'}</span>
                         </div>
@@ -214,12 +217,15 @@ const Table: React.FC<{ data: Array<any>; displayRow?: number }> = ({
                       <td>
                         <div className='row'>
                           <div
-                            className={`status-dot ${
-                              entry[1] ? `active` : `inactive`
-                            }`}
+                            className={`status-dot ${entry[1] === QueueStatus.pending && `active`
+                              } ${entry[1] === QueueStatus.used && `inactive`
+                              } ${entry[1] === QueueStatus.aborted && `inactive`
+                              }`}
                           ></div>
                           <span>
-                            {entry[1] ? 'Đang hoạt động' : 'Ngưng hoạt động'}
+                            {entry[1] === QueueStatus.pending && 'Đang hoạt động'}
+                            {entry[1] === QueueStatus.used && 'Hoàn thành'}
+                            {entry[1] === QueueStatus.aborted && 'Vắng'}
                           </span>
                         </div>
                       </td>
