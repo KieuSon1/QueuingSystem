@@ -16,6 +16,7 @@ import ModifyService from './Components/Layout/Service/ModifyService/ModifyServi
 import NewService from './Components/Layout/Service/NewService/NewService';
 import Service from './Components/Layout/Service/Service';
 import UserInfo from './Components/Layout/UserInfo/UserInfo';
+import Number from './Components/Number/Number';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import DashboardPage from './Pages/Dashboard/DashboardPage';
 import LoginPage from './Pages/Login/LoginPage';
@@ -25,10 +26,10 @@ const App: React.FC = () => {
     <div className='App'>
       <RequireAuth>
         <Routes>
-          <Route path='/' element={<LoginPage />}>
-            <Route path='login' element={<LoginForm />} />
-            <Route path='forgot-password' element={<ForgotPasswordForm />} />
-            <Route path='edit-password' element={<EditPasswordForm />} />
+          <Route path="/" element={<LoginPage />}>
+            <Route path="login" element={<LoginForm />} />
+            <Route path="forgot-password" element={<ForgotPasswordForm />} />
+            <Route path="edit-password" element={<EditPasswordForm />} />
           </Route>
           <Route path='/dashboard' element={<DashboardPage />}>
             <Route path='panel' element={<Dashboard />} />
@@ -44,10 +45,11 @@ const App: React.FC = () => {
               <Route path='modify' element={<ModifyService />} />
               <Route path='list' element={<ListService />} />
             </Route>
-            <Route path='user-info' element={<UserInfo />} />
+            <Route path="user-info" element={<UserInfo />} />
           </Route>
         </Routes>
       </RequireAuth>
+
     </div>
   );
 };
