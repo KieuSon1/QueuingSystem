@@ -7,23 +7,21 @@ import "./editpasswordform.scss"
 
 const EditPasswordForm: React.FC = () => {
   const navigate = useNavigate()
-    return (
-        <div className="edit-password-form">
-        <div className="edit-password-form-top">
-          <Logo />
-        </div>
-        <div className="edit-password-form-middle">
-            <div className="label">Đặt lại mật khẩu mới</div>
-          <Textbox label="Mật khẩu" type={InputType.password} />
-          <Textbox label="Nhập lại mật khẩu" type={InputType.password} />
-        </div>
-        <div className="edit-password-form-bottom">
-          <Button  text="Xác nhận" onClick={() => navigate("/login")}/>
-        </div>
-    
-       
+  return (
+    <div className="edit-password-form">
+      <div className="edit-password-form-top">
+        <Logo />
       </div>
-      )
-}
+      <div className="edit-password-form-middle">
+        <div className="label">Đặt lại mật khẩu mới</div>
+        <Textbox label="Mật khẩu" type={InputType.password} />
+        <Textbox label="Nhập lại mật khẩu" type={InputType.password} />
+      </div>
+      <div className="edit-password-form-bottom">
+        <Button text="Xác nhận" onClick={() => navigate("/login")} />
+      </div>
+    </div>
+  );
+};
 
-export default EditPasswordForm
+export default EditPasswordForm;

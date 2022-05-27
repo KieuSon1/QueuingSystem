@@ -4,7 +4,7 @@ import Button from '../../../Button/Button';
 import Textbox from '../../../Textbox/Textbox';
 import './newdevice.scss';
 
-const NewDevice = () => {
+const NewDevice: React.FC = () => {
   const navigate = useNavigate();
   return (
     <div className="new-device">
@@ -20,14 +20,14 @@ const NewDevice = () => {
       <div className="btn__bottom">
         <div className="cancel">
           <Button
-            text="Hủy bỏ"
+            text='Hủy bỏ'
             isOutlined
             onClick={() => navigate('/dashboard/device/list')}
           />
         </div>
-        <div className="add__device">
+        <div className='add__device'>
           <Button
-            text="Thêm thiết bị"
+            text='Thêm thiết bị'
             onClick={() => navigate('/dashboard/device/list')}
           />
         </div>

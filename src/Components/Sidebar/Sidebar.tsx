@@ -21,7 +21,7 @@ const items = [
   { name: 'Báo cáo', icon: <ReportIc /> },
   { name: 'Cài đặt hệ thống', icon: <SettingIc /> },
 ];
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
   const signOut = ():void => {
@@ -37,11 +37,11 @@ const Sidebar = () => {
   },[path, location]);
 
   return (
-    <div className="app__sidebar">
-      <div className="app__sidebar__logo">
+    <div className='app__sidebar'>
+      <div className='app__sidebar__logo'>
         <LogoSm />
       </div>
-      <div className="app__sidebar__items-container">
+      <div className='app__sidebar__items-container'>
         {items.map((item) => {
           return (
             <div
@@ -49,13 +49,13 @@ const Sidebar = () => {
               key={item.name}
               onClick={() => navigate(`${item.path ? item.path : ``}`)}
             >
-              <div className="menu-item__icon">{item.icon}</div>
-              <div className="menu-item__name">{item.name}</div>
+              <div className='menu-item__icon'>{item.icon}</div>
+              <div className='menu-item__name'>{item.name}</div>
             </div>
           );
         })}
       </div>
-      <div className="app__sidebar__sign-out">
+      <div className='app__sidebar__sign-out'>
         <button onClick={() => signOut()}>
           <span>
             <SignOutIc />
