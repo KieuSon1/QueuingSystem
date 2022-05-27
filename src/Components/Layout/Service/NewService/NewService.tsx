@@ -15,8 +15,8 @@ const NewService: React.FC = () => {
           <div className="row form-label">Thông tin dịch vụ</div>
           <div className='row'>
             <div className="col flex-1">
-              <Textbox label='Mã dịch vụ' />
-              <Textbox label='Tên dịch vụ' />
+              <Textbox label='Mã dịch vụ *' />
+              <Textbox label='Tên dịch vụ *' />
             </div>
             <div className='col flex-1'>
               Mô tả
@@ -58,6 +58,7 @@ const NewService: React.FC = () => {
               Reset mỗi ngày
             </label>
           </div>
+          <div className="notification">* Là trường thông tin bắt buộc</div>
         </div>
       </div>
 
