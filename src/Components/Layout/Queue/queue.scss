@@ -1,0 +1,22 @@
+@import "../../../scss/color";
+
+.app__layout-queue {
+  height: 100%;
+  width: 100%;
+  background-color: $gray;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  .content {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 90px;
+    padding: 0 30px 30px 30px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

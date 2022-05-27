@@ -34,18 +34,20 @@ const Select: React.FC<{
         </span>
         {isExpand && (
           <div className="dropdown">
-            {options.map((item, index) => {
-              return (
-                <div
-                  className={`select-item ${
-                    selectedIndex === index && `selected`
-                  }`}
-                  onClick={() => setSelectedIndex(index)}
-                >
-                  {item}
-                </div>
-              );
-            })}
+            <div className="dropdown__container">
+              {options.map((item, index) => {
+                return (
+                  <div
+                    className={`select-item ${selectedIndex === index && `selected`
+                      }`}
+                    onClick={() => setSelectedIndex(index)}
+                  >
+                    {item}
+                  </div>
+                );
+              })}
+            </div>
+
           </div>
         )}
       </div>

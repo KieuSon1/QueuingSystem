@@ -18,6 +18,12 @@ enum DevicePath {
   detail = 'Chi tiết thiết bị',
 }
 
+enum QueuePath {
+  queue = "Cấp số",
+  list = "Danh sách cấp số",
+  new = "Cấp số mới"
+}
+
 const SiteMap: React.FC = () => {
   const location = useLocation();
   const [path, setPath] = useState<string[]>([]);
@@ -39,6 +45,8 @@ const SiteMap: React.FC = () => {
                   ServicePath[pathname as keyof typeof ServicePath]}
                 {path[2] === 'device' &&
                   DevicePath[pathname as keyof typeof DevicePath]}
+                {path[2] === 'queue' &&
+                  QueuePath[pathname as keyof typeof QueuePath]}
                 {path[2] === 'panel' && 'Dashboard'}
               </div>
             </div>

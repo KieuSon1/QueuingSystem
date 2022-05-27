@@ -8,7 +8,6 @@ import { ReactComponent as ServiceIc } from '../../Assets/service.svg';
 import { ReactComponent as NumberIc } from '../../Assets/number.svg';
 import { ReactComponent as ReportIc } from '../../Assets/report.svg';
 import { ReactComponent as SettingIc } from '../../Assets/setting.svg';
-
 import { ReactComponent as SignOutIc } from '../../Assets/signout.svg';
 import { useDispatch } from 'react-redux';
 import { logout } from '../../redux/userSlice';
@@ -17,7 +16,7 @@ const items = [
   { name: 'Dashboard', icon: <DashboardIc />, path: 'panel' },
   { name: 'Thiết bị', icon: <DeviceIc />, path: 'device/list' },
   { name: 'Dịch vụ', icon: <ServiceIc />, path: 'service/list' },
-  { name: 'Cấp số', icon: <NumberIc /> },
+  { name: 'Cấp số', icon: <NumberIc />, path: 'queue/list' },
   { name: 'Báo cáo', icon: <ReportIc /> },
   { name: 'Cài đặt hệ thống', icon: <SettingIc /> },
 ];
