@@ -10,6 +10,8 @@ import { ReactComponent as ReportIc } from '../../Assets/report.svg';
 import { ReactComponent as SettingIc } from '../../Assets/setting.svg';
 
 import { ReactComponent as SignOutIc } from '../../Assets/signout.svg';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../redux/userSlice';
 
 const items = [
   { name: 'Dashboard', icon: <DashboardIc />, path: 'panel' },
@@ -21,6 +23,11 @@ const items = [
 ];
 const Sidebar = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const signOut = ():void => {
+    dispatch(logout())
+    navigate("/login")
+  }
 
   return (
     <div className="app__sidebar">
@@ -42,7 +49,7 @@ const Sidebar = () => {
         })}
       </div>
       <div className="app__sidebar__sign-out">
-        <button onClick={() => navigate('/login')}>
+        <button onClick={() => signOut()}>
           <span>
             <SignOutIc />
           </span>

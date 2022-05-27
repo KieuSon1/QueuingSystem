@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./usersection.scss";
 import Bell from "../../Assets/Bell";
 import { useNavigate } from "react-router";
+import { useSelector } from 'react-redux';
+import { RootState } from "../../redux/store";
 
 const imgUrl =
   "https://scontent.fsgn5-15.fna.fbcdn.net/v/t1.15752-9/280456204_850331862593722_6796225965863368502_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=dcaDmjBWarcAX8viF6b&_nc_ht=scontent.fsgn5-15.fna&oh=03_AVIX0X9FNAAF0zRrl4u4NzkEVYeWmp_keO7T2iP1kMAJZA&oe=62AECF0E";
@@ -19,6 +21,7 @@ const notifications = [
 
 const UserSection: React.FC = () => {
   const [notificationExpand, setNotificationExpand] = useState(false);
+  const user = useSelector((state:RootState) => state.user)
   const navigate = useNavigate();
 
   return (
@@ -49,11 +52,11 @@ const UserSection: React.FC = () => {
         )}
       </div>
       <div className="avatar">
-        <img src={imgUrl} alt="" onClick={() => navigate("user-info")}/>
+        <img src={user.avatar} alt="" onClick={() => navigate("user-info")}/>
       </div>
       <div className="hello-user">
         <span className="hello">Xin chào</span>
-        <span className="user-name">Mạnh Quang Thông</span>
+        <span className="user-name">{user.fullName}</span>
 
       </div>
     </div>

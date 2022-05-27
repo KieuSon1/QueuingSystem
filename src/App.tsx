@@ -13,13 +13,15 @@ import NewDevice from './Components/Layout/Device/NewDevice/NewDevice';
 import ListService from './Components/Layout/Service/ListService/ListService';
 import Service from './Components/Layout/Service/Service';
 import UserInfo from './Components/Layout/UserInfo/UserInfo';
+import RequireAuth from './Components/RequireAuth/RequireAuth';
 import DashboardPage from './Pages/Dashboard/DashboardPage';
 import LoginPage from './Pages/Login/LoginPage';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Routes>
+      <RequireAuth>
+        <Routes>
         <Route path="/" element={<LoginPage />}>
           <Route path="login" element={<LoginForm />} />
           <Route path="forgot-password" element={<ForgotPasswordForm />} />
@@ -39,6 +41,8 @@ const App: React.FC = () => {
           <Route path="user-info" element={<UserInfo />} />
         </Route>
       </Routes>
+      </RequireAuth>
+      
     </div>
   );
 };
