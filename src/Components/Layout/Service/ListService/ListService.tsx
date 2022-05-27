@@ -194,31 +194,31 @@ const tableData: IServiceRow[] = [
     serviceUpdate: true,
   },
 ];
-const ListService = () => {
+const ListService: React.FC = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="service-list">
-        <div className="row label">Danh sách dịch vụ</div>
-        <div className="row filters">
+      <div className='service-list'>
+        <div className='row label'>Danh sách dịch vụ</div>
+        <div className='row filters'>
           <Select
-            label="Trạng thái hoạt động"
+            label='Trạng thái hoạt động'
             options={activeStatus}
             width={300}
           />
           <Select
-            label="Trạng thái kết nối"
+            label='Trạng thái kết nối'
             options={connectionStatus}
             width={300}
           />
           {/* <Textbox label="Từ khoá" /> */}
         </div>
-        <div className="row table">
+        <div className='row table'>
           <Table data={tableData} displayRow={9} />
         </div>
       </div>
       <div
-        className="add-service-btn"
+        className='add-service-btn'
         onClick={() => navigate('/dashboard/device/new')}
       >
         <span>

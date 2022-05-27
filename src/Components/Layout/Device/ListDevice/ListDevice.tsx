@@ -4,6 +4,7 @@ import Table, { IDeviceRow, Service } from '../../../Table/Table';
 import { ReactComponent as AddIc } from '../../../../Assets/add-square.svg';
 import './listdevice.scss';
 import { useNavigate } from 'react-router';
+import Textbox, { InputType } from '../../../Textbox/Textbox';
 
 const activeStatus = ['Tất cả', 'Hoạt động', 'Ngưng hoạt động'];
 const connectionStatus = ['Tất cả', 'Kết nối', 'Mất kết nối'];
@@ -221,31 +222,31 @@ const tableData: IDeviceRow[] = [
   },
 ];
 
-const ListDevice = () => {
+const ListDevice: React.FC = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="device-list">
-        <div className="row label">Danh sách thiết bị</div>
-        <div className="row filters">
+      <div className='device-list'>
+        <div className='row label'>Danh sách thiết bị</div>
+        <div className='row filters'>
           <Select
-            label="Trạng thái hoạt động"
+            label='Trạng thái hoạt động'
             options={activeStatus}
             width={300}
           />
           <Select
-            label="Trạng thái kết nối"
+            label='Trạng thái kết nối'
             options={connectionStatus}
             width={300}
           />
-          {/* <Textbox label="Từ khoá" /> */}
+          <Textbox label="Từ khoá" type={InputType.search} boxWidth={300}/>
         </div>
-        <div className="row table">
+        <div className='row table'>
           <Table data={tableData} displayRow={9} />
         </div>
       </div>
       <div
-        className="add-device-btn"
+        className='add-device-btn'
         onClick={() => navigate('/dashboard/device/new')}
       >
         <span>

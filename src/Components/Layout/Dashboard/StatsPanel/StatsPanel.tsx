@@ -39,10 +39,10 @@ const summaryData: summary[] = [
 
 const StatsPanel: React.FC = () => {
   return (
-    <div className="dashboard__stats">
-      <div className="dashboard__stats__container">
-        <div className="label">Tổng quan</div>
-        <div className="summary">
+    <div className='dashboard__stats'>
+      <div className='dashboard__stats__container'>
+        <div className='label'>Tổng quan</div>
+        <div className='summary'>
           {summaryData.map((summary, index) => (
             <SummaryCard
               key={index}
@@ -55,7 +55,7 @@ const StatsPanel: React.FC = () => {
             />
           ))}
         </div>
-        <div className="calendar">
+        <div className='calendar'>
           <CalendarView />
         </div>
       </div>

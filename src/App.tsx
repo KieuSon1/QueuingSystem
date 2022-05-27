@@ -20,7 +20,7 @@ import LoginPage from './Pages/Login/LoginPage';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className='App'>
       <RequireAuth>
         <Routes>
           <Route path="/" element={<LoginPage />}>

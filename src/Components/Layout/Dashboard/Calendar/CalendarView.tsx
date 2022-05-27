@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import './calendar.scss';
 
-const CalendarView = () => {
+const CalendarView: React.FC = () => {
   const [value, onChange] = useState(new Date());
   return <Calendar value={value} />;
 };
