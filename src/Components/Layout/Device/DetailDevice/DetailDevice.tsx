@@ -40,5 +40,6 @@ const DetailDevice: React.FC = () => {
     </div>
   );
 };
+//conmeo
 
 export default DetailDevice;
