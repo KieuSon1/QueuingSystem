@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import Button from '../../../Button/Button'
 import Modal from '../../../Modal/Modal'
-import Number from '../../../Number/Number'
 import Select from '../../../Select/Select'
 import { ReactComponent as XmarkIc } from '../../../../Assets/xmark.svg'
 import "./newqueue.scss"
 import { useNavigate } from 'react-router';
-
-const serviceList = ["Khám tim mạch", "Sản - phụ khoa", "Khám tai - mũi - họng"]
+import { serviceList } from '../../../Mock'
 
 const NewQueue: React.FC = () => {
     const [modal, setModal] = useState<boolean>(false)
