@@ -34,7 +34,7 @@ const ModifyService: React.FC = () => {
           onClick={() => navigate('/dashboard/molifyservice/list')}
         />
         <Button
-          text='Thêm thiết bị'
+          text='Thêm dịch vụ'
           onClick={() => navigate('/dashboard/molifyservice/list')}
         />
       </div>
