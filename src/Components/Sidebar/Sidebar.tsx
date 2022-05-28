@@ -17,7 +17,7 @@ const items = [
   { name: 'Thiết bị', icon: <DeviceIc />, path: 'device/list' },
   { name: 'Dịch vụ', icon: <ServiceIc />, path: 'service/list' },
   { name: 'Cấp số', icon: <NumberIc />, path: 'queue/list' },
-  { name: 'Báo cáo', icon: <ReportIc /> },
+  { name: 'Báo cáo', icon: <ReportIc />, path: 'report/create'},
   { name: 'Cài đặt hệ thống', icon: <SettingIc /> },
 ];
 const Sidebar: React.FC = () => {

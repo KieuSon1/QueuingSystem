@@ -1,7 +1,7 @@
 import React from 'react';
-import CalendarView from '../Calendar/CalendarView';
 import SummaryCard from './SummaryCard';
 import './statspanel.scss';
+import Calendar from 'react-calendar';
 
 interface summary {
   type: string;
@@ -56,7 +56,7 @@ const StatsPanel: React.FC = () => {
           ))}
         </div>
         <div className='calendar'>
-          <CalendarView />
+          <Calendar />
         </div>
       </div>
     </div>

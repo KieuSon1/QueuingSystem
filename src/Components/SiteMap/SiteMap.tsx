@@ -24,6 +24,11 @@ enum QueuePath {
   new = "Cấp số mới"
 }
 
+enum ReportPath {
+  report = "Báo cáo",
+  create = "Lập báo cáo"
+}
+
 const SiteMap: React.FC = () => {
   const location = useLocation();
   const [path, setPath] = useState<string[]>([]);
@@ -47,6 +52,8 @@ const SiteMap: React.FC = () => {
                   DevicePath[pathname as keyof typeof DevicePath]}
                 {path[2] === 'queue' &&
                   QueuePath[pathname as keyof typeof QueuePath]}
+                {path[2] === 'report' &&
+                  ReportPath[pathname as keyof typeof ReportPath]}
                 {path[2] === 'panel' && 'Dashboard'}
               </div>
             </div>

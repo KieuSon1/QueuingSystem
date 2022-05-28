@@ -9,13 +9,14 @@
     font-size: 18px;
     line-height: 27px;
     width: fit-content;
+    font-weight: 600;
+    margin-bottom: 8px;
   }
 
   &__input {
     width: inherit;
     height: 44px;
     position: relative;
-    margin-top: 8px;
 
     input {
       height: inherit !important;
