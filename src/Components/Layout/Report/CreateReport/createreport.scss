@@ -1,6 +1,6 @@
 @import '../../../../scss/color';
 @import '../../../../scss/calendar';
-.app__layout-report__new-report__new-report {
+.app__layout-report__new-report {
   height: 1000px;
   width: 100%;
   padding-right: 60px;
@@ -13,7 +13,7 @@
   }
 }
 
-.app__layout-report__add-device-btn {
+.app__layout-report__new-report__float-btn {
   position: fixed;
   height: 94px;
   width: 80px;
