@@ -15,10 +15,10 @@ import Textbox, { InputType } from '../../../Textbox/Textbox';
 const ListService: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <>
-      <div className="app__layout-service__service-list">
-        <div className="row label">Danh sách dịch vụ</div>
-        <div className="row filters">
+    <div className="app__service-layout__service-list">
+      <div className="app__service-layout__service-list__container">
+        <div className="row app__service-layout__service-list__container__label">Danh sách dịch vụ</div>
+        <div className="row app__service-layout__service-list__container__filters">
           <Select
             label="Trạng thái hoạt động"
             options={activeStatus}
@@ -27,12 +27,12 @@ const ListService: React.FC = () => {
           <DatePicker label="Chọn thời gian" />
           <Textbox label="Từ khoá" type={InputType.search} />
         </div>
-        <div className="row table">
+        <div className="row app__service-layout__service-list__container__table">
           <Table data={serviceDetailList} displayRow={9} />
         </div>
       </div>
       <div
-        className="app__layout-service__add-service-btn"
+        className="app__service-layout__service-list__float-btn"
         onClick={() => navigate('/dashboard/service/new')}
       >
         <span>
@@ -40,7 +40,8 @@ const ListService: React.FC = () => {
         </span>
         <span>Thêm dịch vụ</span>
       </div>
-    </>
+    </div>
+
   );
 };
 
