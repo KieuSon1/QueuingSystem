@@ -22,7 +22,7 @@ const DetailDevice: React.FC = () => {
         <span>
           <AddIc />
         </span>
-        <span>Chỉnh sửa thiết bị</span>
+        <span>Quay lại</span>
       </div>
     </div>
   );

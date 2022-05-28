@@ -2,10 +2,28 @@
 .app__layout-queue__detail-queue {
   height: 1000px;
   width: 100%;
+  padding-right: 60px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__title {
+    height: 36px;
+    width: 172px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color: $orange;
+    padding-top: 25px;
+  }
 
   &__container {
-    height: fit-content;
-    min-height: 550px;
+    height: 550px;
     width: 100%;
     padding: 16px 24px;
     border-radius: 16px;
@@ -13,8 +31,12 @@
     margin-top: 16px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
     box-sizing: border-box;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
 
     .form-label {
       height: 30px;
@@ -38,14 +60,14 @@
       }
     }
   }
-}
 
-.app__layout-queue__title {
-  height: 36px;
-  width: 172px;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 36px;
-  color: $orange;
-  padding-top: 25px;
+  .app__layout-queue__title {
+    height: 36px;
+    width: 172px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color: $orange;
+    padding-top: 25px;
+  }
 }

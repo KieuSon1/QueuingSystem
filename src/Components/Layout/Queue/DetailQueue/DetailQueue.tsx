@@ -1,6 +1,7 @@
 import React from 'react';
 import './detailqueue.scss';
 import { useNavigate } from 'react-router';
+import { ReactComponent as ReturnIc } from '../../../../Assets/return.svg';
 
 const DetailQueue: React.FC = () => {
   const navigate = useNavigate();
