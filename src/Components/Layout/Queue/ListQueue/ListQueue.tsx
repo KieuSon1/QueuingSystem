@@ -19,32 +19,36 @@ const ListQueue: React.FC = () => {
   return (
     <>
       <div className="app__layout-queue__queue-list">
-        <div className="row label">Danh sách cấp số</div>
-        <div className="row filters">
-          <Select
-            label="Tên dịch vụ"
-            options={services}
-            //   width={300}
-          />
-          <Select
-            label="Trạng thái kết nối"
-            options={connectionStatus}
-            //   width={300}
-          />
-          <Select
-            label="Nguồn cấp"
-            options={queueProvider}
-            //   width={300}
-          />
-          <DatePicker label="Chọn thời gian" />
-          <Textbox label="Từ khoá" type={InputType.search} boxWidth={300} />
-        </div>
-        <div className="row table">
-          <Table data={deviceList} displayRow={9} />
+        <div className="app__layout-queue__queue-list__container">
+          <div className="row app__layout-queue__queue-list__container__label">
+            Danh sách cấp số
+          </div>
+          <div className="row app__layout-queue__queue-list__container__filters">
+            <Select
+              label="Tên dịch vụ"
+              options={services}
+              //   width={300}
+            />
+            <Select
+              label="Trạng thái kết nối"
+              options={connectionStatus}
+              //   width={300}
+            />
+            <Select
+              label="Nguồn cấp"
+              options={queueProvider}
+              //   width={300}
+            />
+            <DatePicker label="Chọn thời gian" />
+            <Textbox label="Từ khoá" type={InputType.search} boxWidth={300} />
+          </div>
+          <div className="row table">
+            <Table data={deviceList} displayRow={9} />
+          </div>
         </div>
       </div>
       <div
-        className="app__layout-queue__add-device-btn"
+        className="app__layout-queue__queue-list__float-btn"
         onClick={() => navigate('/dashboard/queue/new')}
       >
         <span>
