@@ -1,6 +1,6 @@
 @import './../../../../scss/color';
 
-.modify-device {
+.app__layout-service__modify-service {
   height: 100%;
   width: 100%;
   background-color: $gray;
@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-.title {
+.app__layout-service__title {
   height: 36px;
   width: 172px;
   font-size: 24px;
@@ -18,7 +18,7 @@
   padding-top: 25px;
 }
 
-.container {
+.app__layout-service__container {
   height: 550px;
   width: 100%;
   padding: 16px 24px;

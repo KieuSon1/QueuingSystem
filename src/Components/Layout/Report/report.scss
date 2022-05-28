@@ -1,4 +1,4 @@
-@import "../../../scss/color";
+@import '../../../scss/color';
 
 .app__layout-report {
   height: 100%;
@@ -8,7 +8,7 @@
   flex-direction: row;
   position: relative;
 
-  .content {
+  .app__layout-report__content {
     height: 100%;
     width: 100%;
     box-sizing: border-box;

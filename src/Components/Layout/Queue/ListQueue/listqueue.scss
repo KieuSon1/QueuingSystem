@@ -1,5 +1,5 @@
 @import '../../../../scss/color';
-.queue-list {
+.app__layout-queue__queue-list__queue-list {
   height: 1000px;
   width: 100%;
   display: flex;
@@ -35,7 +35,7 @@
   }
 }
 
-.add-device-btn {
+.app__layout-queue__add-device-btn {
   position: fixed;
   height: 94px;
   width: 80px;
