@@ -15,6 +15,7 @@ import NewQueue from './Components/Layout/Queue/NewQueue/NewQueue';
 import Queue from './Components/Layout/Queue/Queue';
 import CreateReport from './Components/Layout/Report/CreateReport/CreateReport';
 import Report from './Components/Layout/Report/Report';
+import Role from './Components/Layout/Role/Role';
 import DetailService from './Components/Layout/Service/DetailService/DetailService';
 import ListService from './Components/Layout/Service/ListService/ListService';
 import ModifyService from './Components/Layout/Service/ModifyService/ModifyService';
@@ -56,9 +57,10 @@ const App: React.FC = () => {
             </Route>
             <Route path='report' element={<Report/>}>
               <Route path='create' element={<CreateReport/>}/>
+              <Route path='role' element={<Role />} />
             </Route>
             <Route path='system-setting' element={<></>}>
-              <Route path='role' element={<></>}/>
+              {/* <Route path='role' element={<Role />} /> */}
               <Route path='user-logs' element={<></>} />
             </Route>
             <Route path="user-info" element={<UserInfo />} />
