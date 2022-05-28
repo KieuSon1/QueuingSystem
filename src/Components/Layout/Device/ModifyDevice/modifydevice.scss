@@ -1,6 +1,6 @@
 @import './../../../../scss/color';
 
-.modify-device {
+.app__layout-device__modify-device {
   height: 100%;
   width: 100%;
   background-color: $gray;
@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-.title {
+.app__layout-device__modify-device__title {
   height: 36px;
   width: 172px;
   font-size: 24px;
@@ -18,9 +18,9 @@
   padding-top: 25px;
 }
 
-.container {
+.app__layout-device__modify-device__container {
   height: 550px;
-  width: 1152px;
+  width: 1600px;
   padding: 16px 24px;
   border-radius: 16px;
   background-color: $background;
@@ -57,7 +57,7 @@
   }
 }
 
-.btn__bottom {
+.app__layout-device__modify-device__btn__bottom {
   display: flex;
   flex-direction: row;
   align-items: center;

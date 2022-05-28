@@ -1,5 +1,5 @@
 @import '../../../../scss/color';
-.detail-service {
+.app__layout-service__detail-service {
   height: 1000px;
   width: 100%;
   padding-right: 60px;
@@ -17,7 +17,7 @@
   padding-top: 25px;
 }
 
-.detail-service__container {
+.app__layout-service__detail-service__container {
   height: fit-content;
   min-height: 550px;
   width: 100%;
@@ -82,12 +82,10 @@
     border-radius: inherit;
     padding: 16px 24px;
     box-sizing: border-box;
-
-
   }
 }
 
-.add-service-btn {
+.app__layout-service__add-service-btn {
   position: fixed;
   height: 94px;
   width: 80px;
@@ -123,4 +121,3 @@
     color: $orange;
   }
 }
-
