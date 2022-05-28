@@ -1,7 +1,6 @@
 @import '../../../../scss/color';
-@import '../../../../scss/calendar';
 
-.app__layout-report__new-report {
+.app__layout-service__list-role {
   height: 100vh;
   width: 100%;
   padding: 0 60px 80px 0;
@@ -12,7 +11,7 @@
   }
 }
 
-.app__layout-report__new-report__container {
+.app__layout-service__list-role__container {
   height: fit-content;
   width: inherit;
   display: flex;
@@ -40,7 +39,7 @@
   }
 }
 
-.app__layout-report__new-report__float-btn {
+.app__layout-service__list-role__float-btn {
   position: fixed;
   height: 94px;
   width: 80px;

@@ -27,20 +27,23 @@ const ListQueue: React.FC = () => {
             <Select
               label="Tên dịch vụ"
               options={services}
+              flexItem
               //   width={300}
             />
             <Select
               label="Trạng thái kết nối"
               options={connectionStatus}
+              flexItem
               //   width={300}
             />
             <Select
               label="Nguồn cấp"
               options={queueProvider}
+              flexItem
               //   width={300}
             />
-            <DatePicker label="Chọn thời gian" />
-            <Textbox label="Từ khoá" type={InputType.search} boxWidth={300} />
+            <DatePicker label="Chọn thời gian" flexItem/>
+            <Textbox label="Từ khoá" type={InputType.search} flexItem/>
           </div>
           <div className="row table">
             <Table data={deviceList} displayRow={9} />

@@ -27,6 +27,13 @@ import UserInfo from './Components/Layout/UserInfo/UserInfo';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import DashboardPage from './Pages/Dashboard/DashboardPage';
 import LoginPage from './Pages/Login/LoginPage';
+import System from './Components/Layout/System/System';
+import ListAccount from './Components/Layout/System/ListAccount/ListAccount';
+import NewAccount from './Components/Layout/System/NewAccount/NewAccount';
+import ModifyAccount from './Components/Layout/System/ModifyAccount/ModifyAccount';
+import AccountLogs from './Components/Layout/System/AccountLogs/AccountLogs';
+import ListRole from './Components/Layout/System/ListRole/ListRole';
+import NewRole from './Components/Layout/System/NewRole/NewRole';
 
 const App: React.FC = () => {
   return (
@@ -62,9 +69,13 @@ const App: React.FC = () => {
               <Route path='role' element={<Role />} />
               <Route path='test' element={<Test />} />
             </Route>
-            <Route path='system-setting' element={<></>}>
-              <Route path='role' element={<>ABC</>} />
-              <Route path='user-logs' element={<></>} />
+            <Route path='system' element={<System/>}>
+              <Route path='accounts' element={<ListAccount/>}/>
+              <Route path='new_account' element={<NewAccount />} />
+              <Route path='modify_account' element={<ModifyAccount/>}/>
+              <Route path='roles' element={<ListRole/>} />
+              <Route path='logs' element={<AccountLogs/>} />
+              <Route path='new_role' element={<NewRole/>}/>
             </Route>
             <Route path='user-info' element={<UserInfo />} />
           </Route>

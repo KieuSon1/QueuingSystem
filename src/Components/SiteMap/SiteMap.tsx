@@ -30,6 +30,16 @@ enum ReportPath {
   create = "Lập báo cáo"
 }
 
+enum SystemPath {
+  system = "Cài đặt hệ thống",
+  accounts = "Quản lý tài khoản",
+  new_account = "Tài khoản mới",
+  new_role = "Thêm vai trò",
+  logs = "Nhật ký hoạt động",
+  modify_account = "Cập nhật tài khoản",
+  roles = "Quản lý vai trò",
+}
+
 const SiteMap: React.FC = () => {
   const location = useLocation();
   const [path, setPath] = useState<string[]>([]);
@@ -55,6 +65,8 @@ const SiteMap: React.FC = () => {
                   QueuePath[pathname as keyof typeof QueuePath]}
                 {path[2] === 'report' &&
                   ReportPath[pathname as keyof typeof ReportPath]}
+                {path[2] === 'system' &&
+                  SystemPath[pathname as keyof typeof SystemPath]}
                 {path[2] === 'panel' && 'Dashboard'}
               </div>
             </div>
