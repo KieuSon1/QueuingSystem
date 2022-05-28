@@ -55,17 +55,18 @@ const App: React.FC = () => {
             <Route path='queue' element={<Queue />}>
               <Route path='list' element={<ListQueue />} />
               <Route path='new' element={<NewQueue />} />
-              <Route path='detail' element={<DetailQueue/>}/>
+              <Route path='detail' element={<DetailQueue />} />
             </Route>
-            <Route path='report' element={<Report/>}>
-              <Route path='create' element={<CreateReport/>}/>
+            <Route path='report' element={<Report />}>
+              <Route path='create' element={<CreateReport />} />
               <Route path='role' element={<Role />} />
+              <Route path='test' element={<Test />} />
             </Route>
             <Route path='system-setting' element={<></>}>
-              <Route path='role' element={<>ABC</>}/>
+              <Route path='role' element={<>ABC</>} />
               <Route path='user-logs' element={<></>} />
             </Route>
-            <Route path="user-info" element={<UserInfo />} />
+            <Route path='user-info' element={<UserInfo />} />
           </Route>
         </Routes>
       </RequireAuth>
