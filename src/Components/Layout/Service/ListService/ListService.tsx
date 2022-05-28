@@ -31,6 +31,7 @@ const ListService: React.FC = () => {
           <Table data={serviceDetailList} displayRow={9} />
         </div>
       </div>
+
       <div
         className="app__service-layout__service-list__float-btn"
         onClick={() => navigate('/dashboard/service/new')}

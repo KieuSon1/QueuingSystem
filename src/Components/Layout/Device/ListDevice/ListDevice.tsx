@@ -7,32 +7,33 @@ import { useNavigate } from 'react-router';
 import Textbox, { InputType } from '../../../Textbox/Textbox';
 import { activeStatus, connectionStatus, deviceList } from '../../../Mock';
 
-
 const ListDevice: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <div className='app__device-layout__device-list'>
-      <div className='app__device-layout__device-list__container'>
-        <div className='row app__device-layout__device-list__container__label'>Danh sách thiết bị</div>
-        <div className='row app__device-layout__device-list__container__filters'>
+    <div className="app__device-layout__device-list">
+      <div className="app__device-layout__device-list__container">
+        <div className="row app__device-layout__device-list__container__label">
+          Danh sách thiết bị
+        </div>
+        <div className="row app__device-layout__device-list__container__filters">
           <Select
-            label='Trạng thái hoạt động'
+            label="Trạng thái hoạt động"
             options={activeStatus}
             width={300}
           />
           <Select
-            label='Trạng thái kết nối'
+            label="Trạng thái kết nối"
             options={connectionStatus}
             width={300}
           />
-          <Textbox label="Từ khoá" type={InputType.search} boxWidth={300}/>
+          <Textbox label="Từ khoá" type={InputType.search} boxWidth={300} />
         </div>
-        <div className='row app__device-layout__device-list__container__table'>
+        <div className="row app__device-layout__device-list__container__table">
           <Table data={deviceList} displayRow={9} />
         </div>
       </div>
       <div
-        className='app__device-layout__device-list__float-btn'
+        className="app__device-layout__device-list__float-btn"
         onClick={() => navigate('/dashboard/device/new')}
       >
         <span>
