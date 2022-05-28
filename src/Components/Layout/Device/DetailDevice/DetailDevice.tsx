@@ -6,9 +6,9 @@ import { ReactComponent as AddIc } from '../../../../Assets/add-square.svg';
 const DetailDevice: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <div className='detail-device'>
-      <div className='title'>Quản lý thiết bị</div>
-      <div className='container'>
+    <div className='app__device-layout__detail-device'>
+      <div className='app__device-layout__detail-device__title'>Quản lý thiết bị</div>
+      <div className='app__device-layout__detail-device__container'>
         <div className='row form-label'>Thông tin thiết bị</div>
         <div className="row"><div className='flex-1'>Mã thiết bị:</div><div className='flex-1'>Loại thiết bị:</div></div>
         <div className="row"><div className='flex-1'>Tên thiết bị:</div><div className='flex-1'>Tên đăng nhập:</div></div>
@@ -16,13 +16,13 @@ const DetailDevice: React.FC = () => {
         <div className="row"><div className='flex-1'>Dịch vụ sử dụng:</div></div>
       </div>
       <div
-        className='add-device-btn'
-        onClick={() => navigate('/dashboard/device/detail')}
+        className='app__device-layout__detail-device__float-btn'
+        onClick={() => navigate('/dashboard/device/modify')}
       >
         <span>
           <AddIc />
         </span>
-        <span>Cập nhật thiết bị</span>
+        <span>Chỉnh sửa thiết bị</span>
       </div>
     </div>
   );
