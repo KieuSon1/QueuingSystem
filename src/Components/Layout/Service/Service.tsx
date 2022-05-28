@@ -6,7 +6,7 @@ import { ReactComponent as ArrowIc } from '../../../Assets/arrow.svg';
 const Service: React.FC = () => {
   return (
     <div className='app__layout-service'>
-      <div className='content'>
+      <div className='app__layout-service__content'>
         <Outlet />
       </div>
     </div>

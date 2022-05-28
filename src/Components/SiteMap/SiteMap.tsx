@@ -21,7 +21,8 @@ enum DevicePath {
 enum QueuePath {
   queue = "Cấp số",
   list = "Danh sách cấp số",
-  new = "Cấp số mới"
+  new = "Cấp số mới",
+  detail = "Chi tiết"
 }
 
 enum ReportPath {

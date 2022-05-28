@@ -10,19 +10,20 @@ import Device from './Components/Layout/Device/Device';
 import ListDevice from './Components/Layout/Device/ListDevice/ListDevice';
 import ModifyDevice from './Components/Layout/Device/ModifyDevice/ModifyDevice';
 import NewDevice from './Components/Layout/Device/NewDevice/NewDevice';
+import DetailQueue from './Components/Layout/Queue/DetailQueue/DetailQueue';
 import ListQueue from './Components/Layout/Queue/ListQueue/ListQueue';
 import NewQueue from './Components/Layout/Queue/NewQueue/NewQueue';
 import Queue from './Components/Layout/Queue/Queue';
 import CreateReport from './Components/Layout/Report/CreateReport/CreateReport';
 import Report from './Components/Layout/Report/Report';
 import Role from './Components/Layout/Role/Role';
+import Test from './Components/Layout/Report/Test/Test';
 import DetailService from './Components/Layout/Service/DetailService/DetailService';
 import ListService from './Components/Layout/Service/ListService/ListService';
 import ModifyService from './Components/Layout/Service/ModifyService/ModifyService';
 import NewService from './Components/Layout/Service/NewService/NewService';
 import Service from './Components/Layout/Service/Service';
 import UserInfo from './Components/Layout/UserInfo/UserInfo';
-import Number from './Components/Number/Number';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import DashboardPage from './Pages/Dashboard/DashboardPage';
 import LoginPage from './Pages/Login/LoginPage';
@@ -54,13 +55,14 @@ const App: React.FC = () => {
             <Route path='queue' element={<Queue />}>
               <Route path='list' element={<ListQueue />} />
               <Route path='new' element={<NewQueue />} />
+              <Route path='detail' element={<DetailQueue/>}/>
             </Route>
             <Route path='report' element={<Report/>}>
               <Route path='create' element={<CreateReport/>}/>
               <Route path='role' element={<Role />} />
             </Route>
             <Route path='system-setting' element={<></>}>
-              {/* <Route path='role' element={<Role />} /> */}
+              <Route path='role' element={<>ABC</>}/>
               <Route path='user-logs' element={<></>} />
             </Route>
             <Route path="user-info" element={<UserInfo />} />

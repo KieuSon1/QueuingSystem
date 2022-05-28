@@ -1,32 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
 import Select from '../../../Select/Select'
-import Table, { IServiceQueue, QueueStatus } from '../../../Table/Table'
+import Table from '../../../Table/Table'
 import Textbox, { InputType } from '../../../Textbox/Textbox'
 import "./detailservice.scss"
 import { ReactComponent as AddIc } from '../../../../Assets/add-square.svg';
+import { queueList } from '../../../Mock'
 
-const serviceQueue: IServiceQueue[] = [
-  { no: 202020, queueStatus: QueueStatus.pending },
-  { no: 202020, queueStatus: QueueStatus.pending },
-  { no: 101010, queueStatus: QueueStatus.pending },
-  { no: 101010, queueStatus: QueueStatus.pending },
-  { no: 202020, queueStatus: QueueStatus.used },
-  { no: 202020, queueStatus: QueueStatus.used },
-  { no: 333333, queueStatus: QueueStatus.used },
-  { no: 333333, queueStatus: QueueStatus.pending },
-  { no: 202020, queueStatus: QueueStatus.pending },
-  { no: 444444, queueStatus: QueueStatus.pending },
-  { no: 444444, queueStatus: QueueStatus.aborted },
-  { no: 202020, queueStatus: QueueStatus.aborted },
-  { no: 202020, queueStatus: QueueStatus.aborted },
-  { no: 202020, queueStatus: QueueStatus.aborted },
-  { no: 929292, queueStatus: QueueStatus.aborted },
-  { no: 929292, queueStatus: QueueStatus.pending },
-  { no: 202020, queueStatus: QueueStatus.pending },
-  { no: 202020, queueStatus: QueueStatus.pending },
 
-]
 
 const DetailService: React.FC = () => {
   const navigate = useNavigate()
@@ -67,7 +48,7 @@ const DetailService: React.FC = () => {
             <Textbox label='Từ khoá' type={InputType.search} />
           </div>
           <div className="row table">
-            <Table data={serviceQueue} displayRow={8} />
+            <Table data={queueList} displayRow={8} />
           </div>
         </div>
       </div>
