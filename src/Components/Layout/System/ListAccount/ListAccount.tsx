@@ -5,7 +5,7 @@ import { ReactComponent as AddIc } from '../../../../Assets/add-square.svg';
 import './listaccount.scss';
 import { useNavigate } from 'react-router';
 import Textbox, { InputType } from '../../../Textbox/Textbox';
-import { activeStatus, connectionStatus, deviceList } from '../../../Mock';
+import { activeStatus, connectionStatus, deviceList, userList } from '../../../Mock';
 
 const ListAccount: React.FC = () => {
   const navigate = useNavigate();
@@ -21,15 +21,10 @@ const ListAccount: React.FC = () => {
             options={activeStatus}
             width={300}
           />
-          <Select
-            label='Trạng thái kết nối'
-            options={connectionStatus}
-            width={300}
-          />
           <Textbox label='Từ khoá' type={InputType.search} boxWidth={300} />
         </div>
         <div className='row app__account-layout__account-list__container__table'>
-          <Table data={deviceList} displayRow={9} />
+          <Table data={userList} displayRow={9} />
         </div>
       </div>
       <div

@@ -4,7 +4,7 @@ import './createreport.scss';
 import { useNavigate } from 'react-router';
 import Table from '../../../Table/Table';
 import DatePicker from '../../../DatePicker/DatePicker';
-import { deviceList } from '../../../Mock';
+import { deviceList, reportList } from '../../../Mock';
 
 const CreateReport: React.FC = () => {
   const [modal, setModal] = useState<boolean>(false);
@@ -16,7 +16,7 @@ const CreateReport: React.FC = () => {
           <DatePicker label="Chọn thời gian" />
         </div>
         <div className="row app__layout-report__new-report__container__table">
-          <Table data={deviceList} />
+          <Table data={reportList} />
         </div>
       </div>
 

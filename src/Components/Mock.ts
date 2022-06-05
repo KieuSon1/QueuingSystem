@@ -4,7 +4,65 @@ import {
   IServiceRow,
   QueueStatus,
   Service,
+  IQueueRow,
+  IUserRow,
+  IReportRow
 } from './Table/Table';
+
+export const reportList: IReportRow[] = [
+  {
+    no: 2010001,
+    serviceName: [Service.Heart],
+    grantTime: '7:20 - 07/10/2022',
+    queueStatus: QueueStatus.pending,
+    provideBy: 'Kiosk'
+  },
+  {
+    no: 2010001,
+    serviceName: [Service.Heart],
+    grantTime: '7:20 - 07/10/2022',
+    queueStatus: QueueStatus.aborted,
+    provideBy: 'Kiosk'
+  },
+]
+export const userList: IUserRow[] = [
+  {
+    userName: 'phamduchuy2212',
+    fullName: 'Phạm Đức Huy',
+    phoneNumber: '0829891853',
+    email: 'huyducpham2000@gmail.com',
+    role: 'Kế toán',
+    isActivated: true,
+    userUpdate: true,
+  },
+  {
+    userName: 'phamduchuy2212',
+    fullName: 'Phạm Đức Huy',
+    phoneNumber: '0829891853',
+    email: 'huyducpham2000@gmail.com',
+    role: 'Kế toán',
+    isActivated: true,
+    userUpdate: true,
+  },
+  {
+    userName: 'phamduchuy2212',
+    fullName: 'Phạm Đức Huy',
+    phoneNumber: '0829891853',
+    email: 'huyducpham2000@gmail.com',
+    role: 'Kế toán',
+    isActivated: false,
+    userUpdate: true,
+  },
+  {
+    userName: 'phamduchuy2212',
+    fullName: 'Phạm Đức Huy',
+    phoneNumber: '0829891853',
+    email: 'huyducpham2000@gmail.com',
+    role: 'Kế toán',
+    isActivated: false,
+    userUpdate: true,
+  },
+]
 export const queueTable: IQueueRow[] = [
   {
     no: 2010001,
