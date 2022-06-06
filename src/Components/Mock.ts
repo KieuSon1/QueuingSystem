@@ -5,26 +5,72 @@ import {
   QueueStatus,
   Service,
   IQueueRow,
+  IReportRow,
   IUserRow,
-  IReportRow
+  IRoleRow,
+  IAccountLogRow,
 } from './Table/Table';
 
-export const reportList: IReportRow[] = [
+export const accountLog: IAccountLogRow[] = [
   {
-    no: 2010001,
-    serviceName: [Service.Heart],
-    grantTime: '7:20 - 07/10/2022',
-    queueStatus: QueueStatus.pending,
-    provideBy: 'Kiosk'
+    userName: 'tuyetnguyen@12',
+    impactTime: '1/12/2022 15:12:17',
+    ip: '192.168.1.123',
+    act: 'Cập nhật thông tin dịch vụ DV_01',
   },
   {
-    no: 2010001,
-    serviceName: [Service.Heart],
-    grantTime: '7:20 - 07/10/2022',
-    queueStatus: QueueStatus.aborted,
-    provideBy: 'Kiosk'
+    userName: 'tuyetnguyen@12',
+    impactTime: '1/12/2022 15:12:17',
+    ip: '192.168.1.123',
+    act: 'Cập nhật thông tin dịch vụ DV_01',
+  },
+  {
+    userName: 'tuyetnguyen@12',
+    impactTime: '1/12/2022 15:12:17',
+    ip: '192.168.1.123',
+    act: 'Cập nhật thông tin dịch vụ DV_01',
+  },
+  {
+    userName: 'tuyetnguyen@12',
+    impactTime: '1/12/2022 15:12:17',
+    ip: '192.168.1.123',
+    act: 'Cập nhật thông tin dịch vụ DV_01',
+  },
+  {
+    userName: 'tuyetnguyen@12',
+    impactTime: '1/12/2022 15:12:17',
+    ip: '192.168.1.123',
+    act: 'Cập nhật thông tin dịch vụ DV_01',
   },
 ]
+
+export const roleList: IRoleRow[] = [
+  {
+    roleName: 'Kế toán',
+    userNumber: 6,
+    serviceDescribe: 'Thực hiện nhiệm vụ thống kê số liệu và tổng hợp dữ liệu',
+    roleUpdate: true,
+  },
+  {
+    roleName: 'Bác sĩ',
+    userNumber: 6,
+    serviceDescribe: 'Thực hiện nhiệm vụ thống kê số liệu và tổng hợp dữ liệu',
+    roleUpdate: true,
+  },
+  {
+    roleName: 'Lễ tân',
+    userNumber: 6,
+    serviceDescribe: 'Thực hiện nhiệm vụ thống kê số liệu và tổng hợp dữ liệu',
+    roleUpdate: true,
+  },
+  {
+    roleName: 'Y tá',
+    userNumber: 6,
+    serviceDescribe: 'Thực hiện nhiệm vụ thống kê số liệu và tổng hợp dữ liệu',
+    roleUpdate: true,
+  },
+]
+
 export const userList: IUserRow[] = [
   {
     userName: 'phamduchuy2212',
@@ -62,7 +108,98 @@ export const userList: IUserRow[] = [
     isActivated: false,
     userUpdate: true,
   },
+  {
+    userName: 'phamduchuy2212',
+    fullName: 'Phạm Đức Huy',
+    phoneNumber: '0829891853',
+    email: 'huyducpham2000@gmail.com',
+    role: 'Kế toán',
+    isActivated: true,
+    userUpdate: true,
+  },
+  {
+    userName: 'phamduchuy2212',
+    fullName: 'Phạm Đức Huy',
+    phoneNumber: '0829891853',
+    email: 'huyducpham2000@gmail.com',
+    role: 'Kế toán',
+    isActivated: false,
+    userUpdate: true,
+  },
+  {
+    userName: 'phamduchuy2212',
+    fullName: 'Phạm Đức Huy',
+    phoneNumber: '0829891853',
+    email: 'huyducpham2000@gmail.com',
+    role: 'Kế toán',
+    isActivated: false,
+    userUpdate: true,
+  },
+  {
+    userName: 'phamduchuy2212',
+    fullName: 'Phạm Đức Huy',
+    phoneNumber: '0829891853',
+    email: 'huyducpham2000@gmail.com',
+    role: 'Kế toán',
+    isActivated: true,
+    userUpdate: true,
+  },
+  {
+    userName: 'phamduchuy2212',
+    fullName: 'Phạm Đức Huy',
+    phoneNumber: '0829891853',
+    email: 'huyducpham2000@gmail.com',
+    role: 'Kế toán',
+    isActivated: true,
+    userUpdate: true,
+  },
 ]
+
+export const reportList: IReportRow[] = [
+  {
+    no: 2010001,
+    serviceName: [Service.Heart],
+    grantTime: '7:20 - 07/10/2022',
+    queueStatus: QueueStatus.pending,
+    provideBy: 'Kiosk'
+  },
+  {
+    no: 2010001,
+    serviceName: [Service.Heart],
+    grantTime: '7:20 - 07/10/2022',
+    queueStatus: QueueStatus.aborted,
+    provideBy: 'Kiosk'
+  },
+  {
+    no: 2010001,
+    serviceName: [Service.Heart],
+    grantTime: '7:20 - 07/10/2022',
+    queueStatus: QueueStatus.aborted,
+    provideBy: 'Kiosk'
+  },
+  {
+    no: 2010001,
+    serviceName: [Service.Heart],
+    grantTime: '7:20 - 07/10/2022',
+    queueStatus: QueueStatus.pending,
+    provideBy: 'Kiosk'
+  },
+  {
+    no: 2010001,
+    serviceName: [Service.Heart],
+    grantTime: '7:20 - 07/10/2022',
+    queueStatus: QueueStatus.aborted,
+    provideBy: 'Kiosk'
+  },
+  {
+    no: 2010001,
+    serviceName: [Service.Heart],
+    grantTime: '7:20 - 07/10/2022',
+    queueStatus: QueueStatus.used,
+    provideBy: 'Hệ thống'
+  },
+]
+
 export const queueTable: IQueueRow[] = [
   {
     no: 2010001,
@@ -154,7 +291,48 @@ export const queueTable: IQueueRow[] = [
     provideBy: 'Kiosk',
     queueDetail: true,
   },
-];
+  {
+    no: 2010001,
+    customerName: 'Lê Huỳnh Ái Vân',
+    serviceName: [Service.Heart],
+    grantTime: '14:35 - 07/11/2022',
+    expireTime: '14:35 - 07/12/2022',
+    queueStatus: QueueStatus.used,
+    provideBy: 'Kiosk',
+    queueDetail: true,
+  },
+  {
+    no: 2010001,
+    customerName: 'Lê Huỳnh Ái Vân',
+    serviceName: [Service.Heart],
+    grantTime: '14:35 - 07/11/2022',
+    expireTime: '14:35 - 07/12/2022',
+    queueStatus: QueueStatus.used,
+    provideBy: 'Kiosk',
+    queueDetail: true,
+  },
+  {
+    no: 2010001,
+    customerName: 'Lê Huỳnh Ái Vân',
+    serviceName: [Service.Heart],
+    grantTime: '14:35 - 07/11/2022',
+    expireTime: '14:35 - 07/12/2022',
+    queueStatus: QueueStatus.used,
+    provideBy: 'Kiosk',
+    queueDetail: true,
+  },
+  {
+    no: 2010001,
+    customerName: 'Lê Huỳnh Ái Vân',
+    serviceName: [Service.Heart],
+    grantTime: '14:35 - 07/11/2022',
+    expireTime: '14:35 - 07/12/2022',
+    queueStatus: QueueStatus.used,
+    provideBy: 'Kiosk',
+    queueDetail: true,
+  },
+
+]
 
 export const deviceList: IDeviceRow[] = [
   {
@@ -163,17 +341,17 @@ export const deviceList: IDeviceRow[] = [
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
   {
-    deviceId: 'KIO_02',
-    deviceName: 'Kiosk2',
+    deviceId: 'KIO_01',
+    deviceName: 'Kiosk1',
     ipAddress: '192.169.1.2',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: false,
     displayUpdate: false,
   },
@@ -183,7 +361,7 @@ export const deviceList: IDeviceRow[] = [
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
@@ -193,7 +371,7 @@ export const deviceList: IDeviceRow[] = [
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
@@ -203,7 +381,7 @@ export const deviceList: IDeviceRow[] = [
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
@@ -213,7 +391,7 @@ export const deviceList: IDeviceRow[] = [
     ipAddress: '192.169.1.1',
     isActivated: false,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
@@ -223,7 +401,7 @@ export const deviceList: IDeviceRow[] = [
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
@@ -233,7 +411,7 @@ export const deviceList: IDeviceRow[] = [
     ipAddress: '192.169.1.1',
     isActivated: false,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
@@ -243,7 +421,7 @@ export const deviceList: IDeviceRow[] = [
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
@@ -253,121 +431,113 @@ export const deviceList: IDeviceRow[] = [
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
   {
-    deviceId: 'K2',
+    deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
   {
-    deviceId: 'KIO_02',
-    deviceName: 'Kiosk2',
+    deviceId: 'KIO_01',
+    deviceName: 'Kiosk1',
     ipAddress: '192.169.1.2',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: false,
     displayUpdate: false,
   },
   {
-    deviceId: 'K2',
+    deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
   {
-    deviceId: 'K2',
+    deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
   {
-    deviceId: 'K2',
+    deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
   {
-    deviceId: 'K2',
+    deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
     isActivated: false,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
   {
-    deviceId: 'K2',
+    deviceId: 'KIO_01',
+    deviceName: 'Kiosk',
+    ipAddress: '192.169.1.1',
+    isActivated: true,
+    isConnected: true,
+    services: [Service.Heart, Service.Space, Service.Eye],
+    displayDetail: true,
+    displayUpdate: true,
+  },
+  {
+    deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
     isActivated: false,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
   {
-    deviceId: 'K2',
+    deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
   {
-    deviceId: 'K2',
-    deviceName: 'Kiosk',
-    ipAddress: '192.169.1.1',
-    isActivated: false,
-    isConnected: true,
-    services: [Service.Dental, Service.Heart],
-    displayDetail: true,
-    displayUpdate: true,
-  },
-  {
-    deviceId: 'K2',
+    deviceId: 'KIO_01',
     deviceName: 'Kiosk',
     ipAddress: '192.169.1.1',
     isActivated: true,
     isConnected: true,
-    services: [Service.Dental, Service.Heart],
-    displayDetail: true,
-    displayUpdate: true,
-  },
-  {
-    deviceId: 'ABC',
-    deviceName: 'Kiosk',
-    ipAddress: '192.169.1.1',
-    isActivated: true,
-    isConnected: true,
-    services: [Service.Dental, Service.Heart],
+    services: [Service.Heart, Service.Space, Service.Eye],
     displayDetail: true,
     displayUpdate: true,
   },
 ];
+
+
 export const serviceDetailList: IServiceRow[] = [
   {
     serviceId: 'KIO_01',
@@ -457,7 +627,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceUpdate: true,
   },
   {
-    serviceId: 'K2',
+    serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
     serviceDescribe: 'Chi tiết dịch vụ',
@@ -466,15 +636,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceUpdate: true,
   },
   {
-    serviceId: 'KIO_02',
-    serviceName: 'Kiosk2',
-    isActivated: true,
-    serviceDescribe: 'Chi tiết dịch vụ',
-    serviceDetail: false,
-    serviceUpdate: false,
-  },
-  {
-    serviceId: 'K2',
+    serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
     serviceDescribe: 'Chi tiết dịch vụ',
@@ -483,7 +645,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceUpdate: true,
   },
   {
-    serviceId: 'K2',
+    serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
     serviceDescribe: 'Chi tiết dịch vụ',
@@ -492,7 +654,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceUpdate: true,
   },
   {
-    serviceId: 'K2',
+    serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
     serviceDescribe: 'Chi tiết dịch vụ',
@@ -501,25 +663,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceUpdate: true,
   },
   {
-    serviceId: 'K2',
-    serviceName: 'Kiosk',
-
-    serviceDescribe: 'Chi tiết dịch vụ',
-    isActivated: false,
-    serviceDetail: true,
-    serviceUpdate: true,
-  },
-  {
-    serviceId: 'K2',
-    serviceName: 'Kiosk',
-
-    serviceDescribe: 'Chi tiết dịch vụ',
-    isActivated: false,
-    serviceDetail: true,
-    serviceUpdate: true,
-  },
-  {
-    serviceId: 'K2',
+    serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
     serviceDescribe: 'Chi tiết dịch vụ',
@@ -528,16 +672,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceUpdate: true,
   },
   {
-    serviceId: 'K2',
-    serviceName: 'Kiosk',
-
-    serviceDescribe: 'Chi tiết dịch vụ',
-    isActivated: false,
-    serviceDetail: true,
-    serviceUpdate: true,
-  },
-  {
-    serviceId: 'K2',
+    serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
     serviceDescribe: 'Chi tiết dịch vụ',
@@ -546,7 +681,7 @@ export const serviceDetailList: IServiceRow[] = [
     serviceUpdate: true,
   },
   {
-    serviceId: 'ABC',
+    serviceId: 'KIO_01',
     serviceName: 'Kiosk',
 
     serviceDescribe: 'Chi tiết dịch vụ',
@@ -602,9 +737,9 @@ export enum EDeviceType {
   DisplayCounter = 'Display counter',
 }
 export enum EGraphDisplayType {
-    Day = "Ngày",
-    Week = "Tuần", 
-    Month = "Tháng"
+  Day = "Ngày",
+  Week = "Tuần",
+  Month = "Tháng"
 }
 export const grapthDisplayType = [EGraphDisplayType.Day, EGraphDisplayType.Week, EGraphDisplayType.Month]
 export const deviveType = [EDeviceType.Kiosk, EDeviceType.DisplayCounter]
@@ -630,3 +765,4 @@ export const queueProvider = [
   EQueueProvider.Kiosk,
   EQueueProvider.System,
 ];
+
