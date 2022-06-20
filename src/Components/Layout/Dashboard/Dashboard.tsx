@@ -35,18 +35,16 @@ const Counter: React.FC = () => {
     Filler
   );
   const data = {
-    labels: ["Tuần 1","Tuần 2","Tuần 3","Tuần 4"],
+    labels: ['Tuần 1', 'Tuần 2', 'Tuần 3', 'Tuần 4'],
     drawActiveElementsOnTop: false,
     datasets: [
       {
-        label: "",
-        data: [
-          0, 2800.0, 3200.0, 4200.0,
-        ],
+        label: '',
+        data: [0, 2800.0, 2000.0, 4200.0],
         fill: true,
         lineTension: 0.4,
-        backgroundColor: "rgba(206, 221, 255, 0.4)",
-        borderColor: "#5185F7",
+        backgroundColor: 'rgba(206, 221, 255, 0.4)',
+        borderColor: '#5185F7',
         borderWidth: 1,
         pointRadius: 1,
       },
@@ -60,80 +58,80 @@ const Counter: React.FC = () => {
     },
   };
   return (
-    <div className='app__layout-dashboard__counter'>
-      <div className='app__layout-dashboard__counter__container'>
-        <div className='counter-label'>Biểu đồ cấp số</div>
-        <div className='counter-cards'>
-          <div className='counter-cards__card'>
-            <div className='row'>
-              <div className='image blue'>
+    <div className="app__layout-dashboard__counter">
+      <div className="app__layout-dashboard__counter__container">
+        <div className="counter-label">Biểu đồ cấp số</div>
+        <div className="counter-cards">
+          <div className="counter-cards__card">
+            <div className="row">
+              <div className="image blue">
                 <Calendar1Ic />
               </div>
-              <div className='label'>Số thứ tự đã cấp</div>
+              <div className="label">Số thứ tự đã cấp</div>
             </div>
-            <div className='row'>
-              <div className='count'>4.221</div>
-              <div className='diff raise'>
+            <div className="row">
+              <div className="count">4.221</div>
+              <div className="diff raise">
                 <Arrow />
                 32,41%
               </div>
             </div>
           </div>
-          <div className='counter-cards__card'>
-            <div className='row'>
-              <div className='image green'>
+          <div className="counter-cards__card">
+            <div className="row">
+              <div className="image green">
                 <Calendar2Ic />
               </div>
-              <div className='label'>Số thứ tự đã cấp</div>
+              <div className="label">Số thứ tự đã cấp</div>
             </div>
-            <div className='row'>
-              <div className='count'>3.721</div>
+            <div className="row">
+              <div className="count">3.721</div>
 
-              <div className='diff drop'>
+              <div className="diff drop">
                 <Arrow />
                 32,41%
               </div>
             </div>
           </div>
-          <div className='counter-cards__card'>
-            <div className='row'>
-              <div className='image orange'>
+          <div className="counter-cards__card">
+            <div className="row">
+              <div className="image orange">
                 <WaitIc />
               </div>
-              <div className='label'>Số thứ tự đã cấp</div>
+              <div className="label">Số thứ tự đã cấp</div>
             </div>
-            <div className='row'>
-              <div className='count'>468</div>
-              <div className='diff drop'>
+            <div className="row">
+              <div className="count">468</div>
+              <div className="diff drop">
                 <Arrow />
                 32,41%
               </div>
             </div>
           </div>
-          <div className='counter-cards__card'>
-            <div className='row'>
-              <div className='image red'>
+          <div className="counter-cards__card">
+            <div className="row">
+              <div className="image red">
                 <PassingIc />
               </div>
-              <div className='label'>Số thứ tự đã cấp</div>
+              <div className="label">Số thứ tự đã cấp</div>
             </div>
-            <div className='row'>
-              <div className='count'>32</div>
-              <div className='diff raise'>
+            <div className="row">
+              <div className="count">32</div>
+              <div className="diff raise">
                 <Arrow />
                 32,41%
               </div>
             </div>
           </div>
         </div>
-        <div className='counter-chart'>
-          <div className='row'>
-            <div className='col'>
-              <div className='chart-label'>Bảng thống kê theo ngày</div>
-              <div className='chart-month-of-year'>Tháng 11/2021</div>
+        <div className="counter-chart">
+          <div className="row">
+            <div className="col">
+              <div className="chart-label">Bảng thống kê theo ngày</div>
+              <div className="chart-month-of-year">Tháng 11/2021</div>
             </div>
-            <div className='col'>
-              <div className='view-mode'>
+            <div className="col">
+              <div className="view-mode">
                 <span>Xem theo</span>
                 <Select options={selectOptions} onSelectedChange={change} />
               </div>
@@ -152,11 +150,12 @@ const change = (newValue: string) => {
 
 const Dashboard: React.FC = () => {
   return (
-    <div className='app__layout-dashboard'>
+    <div className="app__layout-dashboard">
       <Counter />
       <StatsPanel />
     </div>
   );
 };
+//S
 
 export default Dashboard;

@@ -19,7 +19,19 @@ export const accountLog: IAccountLogRow[] = [
     act: 'Cập nhật thông tin dịch vụ DV_01',
   },
   {
-    userName: 'tuyetnguyen@12',
+    userName: 'lebao@gmail',
+    impactTime: '1/12/2022 15:12:17',
+    ip: '192.168.1.123',
+    act: 'Cập nhật thông tin dịch vụ DV_01',
+  },
+  {
+    userName: 'khabanh@gmail',
+    impactTime: '1/12/2022 15:12:17',
+    ip: '192.168.1.123',
+    act: 'Cập nhật thông tin dịch vụ DV_01',
+  },
+  {
+    userName: 'conmeo@gmail',
     impactTime: '1/12/2022 15:12:17',
     ip: '192.168.1.123',
     act: 'Cập nhật thông tin dịch vụ DV_01',
@@ -30,19 +42,7 @@ export const accountLog: IAccountLogRow[] = [
     ip: '192.168.1.123',
     act: 'Cập nhật thông tin dịch vụ DV_01',
   },
-  {
-    userName: 'tuyetnguyen@12',
-    impactTime: '1/12/2022 15:12:17',
-    ip: '192.168.1.123',
-    act: 'Cập nhật thông tin dịch vụ DV_01',
-  },
-  {
-    userName: 'tuyetnguyen@12',
-    impactTime: '1/12/2022 15:12:17',
-    ip: '192.168.1.123',
-    act: 'Cập nhật thông tin dịch vụ DV_01',
-  },
-]
+];
 
 export const roleList: IRoleRow[] = [
   {
@@ -69,7 +69,7 @@ export const roleList: IRoleRow[] = [
     serviceDescribe: 'Thực hiện nhiệm vụ thống kê số liệu và tổng hợp dữ liệu',
     roleUpdate: true,
   },
-]
+];
 
 export const userList: IUserRow[] = [
   {
@@ -153,7 +153,7 @@ export const userList: IUserRow[] = [
     isActivated: true,
     userUpdate: true,
   },
-]
+];
 
 export const reportList: IReportRow[] = [
   {
@@ -161,44 +161,44 @@ export const reportList: IReportRow[] = [
     serviceName: [Service.Heart],
     grantTime: '7:20 - 07/10/2022',
     queueStatus: QueueStatus.pending,
-    provideBy: 'Kiosk'
+    provideBy: 'Kiosk',
   },
   {
     no: 2010001,
     serviceName: [Service.Heart],
     grantTime: '7:20 - 07/10/2022',
     queueStatus: QueueStatus.aborted,
-    provideBy: 'Kiosk'
+    provideBy: 'Kiosk',
   },
   {
     no: 2010001,
     serviceName: [Service.Heart],
     grantTime: '7:20 - 07/10/2022',
     queueStatus: QueueStatus.aborted,
-    provideBy: 'Kiosk'
+    provideBy: 'Kiosk',
   },
   {
     no: 2010001,
     serviceName: [Service.Heart],
     grantTime: '7:20 - 07/10/2022',
     queueStatus: QueueStatus.pending,
-    provideBy: 'Kiosk'
+    provideBy: 'Kiosk',
   },
   {
     no: 2010001,
     serviceName: [Service.Heart],
     grantTime: '7:20 - 07/10/2022',
     queueStatus: QueueStatus.aborted,
-    provideBy: 'Kiosk'
+    provideBy: 'Kiosk',
   },
   {
     no: 2010001,
     serviceName: [Service.Heart],
     grantTime: '7:20 - 07/10/2022',
     queueStatus: QueueStatus.used,
-    provideBy: 'Hệ thống'
+    provideBy: 'Hệ thống',
   },
-]
+];
 
 export const queueTable: IQueueRow[] = [
   {
@@ -331,8 +331,7 @@ export const queueTable: IQueueRow[] = [
     provideBy: 'Kiosk',
     queueDetail: true,
   },
-
-]
+];
 
 export const deviceList: IDeviceRow[] = [
   {
@@ -537,7 +536,6 @@ export const deviceList: IDeviceRow[] = [
   },
 ];
 
-
 export const serviceDetailList: IServiceRow[] = [
   {
     serviceId: 'KIO_01',
@@ -737,12 +735,16 @@ export enum EDeviceType {
   DisplayCounter = 'Display counter',
 }
 export enum EGraphDisplayType {
-  Day = "Ngày",
-  Week = "Tuần",
-  Month = "Tháng"
+  Day = 'Ngày',
+  Week = 'Tuần',
+  Month = 'Tháng',
 }
-export const grapthDisplayType = [EGraphDisplayType.Day, EGraphDisplayType.Week, EGraphDisplayType.Month]
-export const deviveType = [EDeviceType.Kiosk, EDeviceType.DisplayCounter]
+export const grapthDisplayType = [
+  EGraphDisplayType.Day,
+  EGraphDisplayType.Week,
+  EGraphDisplayType.Month,
+];
+export const deviveType = [EDeviceType.Kiosk, EDeviceType.DisplayCounter];
 export const services = [EService.Heart, EService.Dental];
 export const serviceList = [
   'Khám tim mạch',
@@ -765,4 +767,3 @@ export const queueProvider = [
   EQueueProvider.Kiosk,
   EQueueProvider.System,
 ];
-
